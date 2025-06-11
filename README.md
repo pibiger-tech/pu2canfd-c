@@ -35,18 +35,18 @@
 
 # Official Documents Reference
 - SavvyCAN Software Usage 
-[SavvyCAN Official Website](https://www.savvycan.com/)
- [SavvyCAN Document](https://www.savvycan.com/docs/)
+ - [SavvyCAN Official Website](https://www.savvycan.com/)
+ - [SavvyCAN Document](https://www.savvycan.com/docs/)
 - Linux Software
 [SavvyCAN Linux](https://github.com/collin80/SavvyCAN/releases/download/V208/SavvyCAN-x86_64.AppImage)
 - MacOs Software
- [SavvyCAN Mac OS](https://github.com/collin80/SavvyCAN/releases/download/V208/SavvyCAN.dmg)
+ - [SavvyCAN Mac OS](https://github.com/collin80/SavvyCAN/releases/download/V208/SavvyCAN.dmg)
  - [How to Use Mac Os](https://docs.123buyelectronic.com/home/user-manual/3-how-to-use-on-mac-os)
 
 # Third Party Software Support
 - CAN-Utils
- [Linux Can-Utils](https://github.com/pibiger-tech/PU2CANFD-C/tree/main/For_Linux_SocketCAN)
+ - [Linux Can-Utils](https://github.com/pibiger-tech/PU2CANFD-C/tree/main/For_Linux_SocketCAN)
 - Busmaster
- [Windows Busmaster](https://rbei-etas.github.io/busmaster/)
+ - [Windows Busmaster](https://rbei-etas.github.io/busmaster/)
 - PEA
- [Windows PEA And API](https://docs.123buyelectronic.com/home)
+ - [Windows PEA And API](https://docs.123buyelectronic.com/home)

@@ -32,3 +32,13 @@
 - ![alt text](https://github.com/pibiger-tech/pu2canfd-c/blob/main/images/Step5.PNG)
 ###  Open Savvy CANFD Software We provide
 ![alt text](https://github.com/pibiger-tech/pu2canfd-c/blob/main/images/Step6.png)
+
+# Official Documents Reference
+- SavvyCAN Software Usage 
+[SavvyCAN Official Website](https://www.savvycan.com/)
+ [SavvyCAN Document](https://www.savvycan.com/docs/)
+- Linux Software
+[SavvyCAN Linux](https://github.com/collin80/SavvyCAN/releases/download/V208/SavvyCAN-x86_64.AppImage)
+- MacOs Software
+ [SavvyCAN Mac OS](https://github.com/collin80/SavvyCAN/releases/download/V208/SavvyCAN.dmg)
+ [How to Use Mac Os](https://docs.123buyelectronic.com/home/user-manual/3-how-to-use-on-mac-os)

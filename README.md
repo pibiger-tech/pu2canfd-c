@@ -19,9 +19,11 @@
 - [SavvyCAN FD Pibiger Version](https://2214540728-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fc9gHV3stj5J1Ngg514P3%2Fuploads%2FUyljf23EipSyIKCzDi6F%2FDriver.zip?alt=media&token=ac1d46af-f95f-45f2-8995-8e88e9a22c85 "SavvyCAN FD")
 
 #### Step2, Connection
-- 2.1  Connect USB  A To Computer. Check from device manager see CAN Hardware
-![alt text](https://github.com/pibiger-tech/pu2canfd-c/blob/main/images/HARDWARE.png)
-- 2.2 Open Savvy CANFD Software We provide
+
+- Connect USB  A To Computer. Check from device manager see CAN Hardware
+ - ![alt text](https://github.com/pibiger-tech/pu2canfd-c/blob/main/images/HARDWARE.png)
+
+- Open Savvy CANFD Software We provide
 ![alt text](https://github.com/pibiger-tech/pu2canfd-c/blob/main/images/Step1.PNG)
 ![alt text](https://github.com/pibiger-tech/pu2canfd-c/blob/main/images/Step2.PNG)
 ![alt text](https://github.com/pibiger-tech/pu2canfd-c/blob/main/images/Step3-Step4.png)

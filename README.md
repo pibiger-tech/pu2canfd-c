@@ -41,7 +41,7 @@
 [SavvyCAN Linux](https://github.com/collin80/SavvyCAN/releases/download/V208/SavvyCAN-x86_64.AppImage)
 - MacOs Software
  [SavvyCAN Mac OS](https://github.com/collin80/SavvyCAN/releases/download/V208/SavvyCAN.dmg)
- [How to Use Mac Os](https://docs.123buyelectronic.com/home/user-manual/3-how-to-use-on-mac-os)
+ - [How to Use Mac Os](https://docs.123buyelectronic.com/home/user-manual/3-how-to-use-on-mac-os)
 
 # Third Party Software Support
 - CAN-Utils

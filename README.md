@@ -48,5 +48,3 @@
   - [Linux Can-Utils](https://github.com/pibiger-tech/PU2CANFD-C/tree/main/For_Linux_SocketCAN)
 - Busmaster
   - [Windows Busmaster](https://rbei-etas.github.io/busmaster/)
-- PEA
-  - [Windows PEA And API](https://docs.123buyelectronic.com/home)

@@ -7,4 +7,11 @@
 - Timestamp resolution up to tp 1μs;
 - Each CAN FD Signal&Power Separately isolated against USB Up to 2.5KV; 
 
-# [Quick Start Guide](https://docs.pibiger-tech.com/home/usb-can-fd-series/quick-start-guide) "")
+# Quick Start Guide
+- [Quick Start Guide](https://docs.pibiger-tech.com/home/usb-can-fd-series/quick-start-guide))
+# CAN FD Protocal
+- [CAN FD Protocal](https://docs.pibiger-tech.com/home/can-fd-protocal)
+# Third Party Software Support
+- [Third Party Software Support](https://docs.pibiger-tech.com/home/third-party-software-support)
+# Official Documents Reference
+- [Official Documents Reference](https://docs.pibiger-tech.com/home/official-documents-reference) 

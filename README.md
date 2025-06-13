@@ -8,4 +8,4 @@
 - Each CAN FD Signal&Power Separately isolated against USB Up to 2.5KV; 
 
 # Quick Start Guide
-- [Quick Start Guide]([https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FkOVFVvzO53fwzjprHC3b%2Fuploads%2Fq8XuNggLNE8Li1Itzc12%2FSavvyCAN%20Hardware%20Manual.pdf?alt=media&token=3fedd629-5810-41ce-8744-5243521f1296](https://docs.pibiger-tech.com/home/usb-can-fd-series/quick-start-guide) "Quick Start Guide")
+- [Quick Start Guide](https://docs.pibiger-tech.com/home/usb-can-fd-series/quick-start-guide) "Quick Start Guide")

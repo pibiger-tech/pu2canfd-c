@@ -8,7 +8,7 @@
 - Each CAN FD Signal&Power Separately isolated against USB Up to 2.5KV; 
 
 # Quick Start Guide
-- [Quick Start Guide](https://docs.pibiger-tech.com/home/usb-can-fd-series/quick-start-guide))
+- [Quick Start Guide](https://docs.pibiger-tech.com/home/usb-can-fd-series/quick-start-guide)
 # CAN FD Protocal
 - [CAN FD Protocal](https://docs.pibiger-tech.com/home/can-fd-protocal)
 # Third Party Software Support

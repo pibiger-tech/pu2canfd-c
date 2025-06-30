@@ -7,6 +7,9 @@
 - Timestamp resolution up to tp 1μs;
 - Each CAN FD Signal&Power Separately isolated against USB Up to 2.5KV; 
 
+# Hardware UserManual
+- [Hardware Manual](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd#id-2-hardware-manual)
+
 # Quick Start Guide
 - [Quick Start Guide](https://docs.pibiger-tech.com/home/usb-can-fd-series/quick-start-guide)
 # CAN FD Protocal

@@ -11,10 +11,10 @@
 - [Hardware Manual](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd#id-2-hardware-manual)
 
 # Quick Start Guide
-- [Quick Start Guide](https://docs.pibiger-tech.com/home/usb-can-fd-series/quick-start-guide)
+- [Quick Start Guide](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/quick-start-guide)
 # CAN FD Protocal
-- [CAN FD Protocal](https://docs.pibiger-tech.com/home/can-fd-protocal)
+- [CAN FD Protocal](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/can-fd-protocal)
 # Third Party Software Support
-- [Third Party Software Support](https://docs.pibiger-tech.com/home/third-party-software-support)
+- [Third Party Software Support](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/third-party-software-support)
 # Official Documents Reference
-- [Official Documents Reference](https://docs.pibiger-tech.com/home/official-documents-reference) 
+- [Official Documents Reference](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/official-documents-reference) 

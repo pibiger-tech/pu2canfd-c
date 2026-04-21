@@ -27,7 +27,7 @@ Welcome to the **pu2canfd-c** repository by Pibiger Technology. This repository 
 ### 💻 Software Support
 
 #### Windows Software
-- **[SavvyCAN FD](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FkOVFVvzO53fwzjprHC3b%2Fuploads%2FXWsnIRO7RFNQBn8b8Hdv%2FSavvyCAN-FD.zip?alt=media&token=69a374d1-501b-4e08-abd3-9a4f8977f5a2)**: Download the official SavvyCAN FD software for Windows.
+- **[SavvyCAN FD](https://www.pibiger-tech.com/wp-content/uploads/2023/07/SavvyCAN-Support-FD.zip)**: Download the official SavvyCAN FD software for Windows.
 - **Linux Can-Utils**: Included in the `3_Linux_Soft_SocketCAN` folder of this repository.
 
 #### Third-Party Software 
@@ -78,7 +78,7 @@ For detailed instructions on using SavvyCAN, please refer to the [SavvyCAN Offic
 ### 💻 软件支持
 
 #### Windows 软件
-- **[SavvyCAN FD](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FkOVFVvzO53fwzjprHC3b%2Fuploads%2FXWsnIRO7RFNQBn8b8Hdv%2FSavvyCAN-FD.zip?alt=media&token=69a374d1-501b-4e08-abd3-9a4f8977f5a2)**: 下载适用于 Windows 的官方 SavvyCAN FD 软件。
+- **[SavvyCAN FD](https://www.pibiger-tech.com/wp-content/uploads/2023/07/SavvyCAN-Support-FD.zip)**: 下载适用于 Windows 的官方 SavvyCAN FD 软件。
 - **Linux Can-Utils**: 包含在本仓库的 `3_Linux_Soft_SocketCAN` 文件夹中。
 
 

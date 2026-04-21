@@ -23,18 +23,16 @@ Welcome to the **pu2canfd-c** repository by Pibiger Technology. This repository 
 - **[Hardware Manual](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd#id-2-hardware-manual)**: Detailed hardware specifications and pinouts.
 - **[Quick Start Guide](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/quick-start-guide)**: Step-by-step instructions to get your device running.
 - **[CAN FD Protocol](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/can-fd-protocal)**: Information on the CAN FD standard and data rates.
-- **[Software Manual (SavvyCAN)](https://www.savvycan.com/docs/)**: Official documentation for the SavvyCAN software.
 
 ### 💻 Software Support
 
 #### Windows Software
 - **[SavvyCAN FD](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FkOVFVvzO53fwzjprHC3b%2Fuploads%2FXWsnIRO7RFNQBn8b8Hdv%2FSavvyCAN-FD.zip?alt=media&token=69a374d1-501b-4e08-abd3-9a4f8977f5a2)**: Download the official SavvyCAN FD software for Windows.
-
-#### Third-Party Software (For Testing)
 - **Linux Can-Utils**: Included in the `3_Linux_Soft_SocketCAN` folder of this repository.
-- **[Windows Busmaster](https://rbei-etas.github.io/busmaster/)**: An open-source PC software for the design, monitoring, analysis, and simulation of CAN networks.
-- **[SavvyCAN Linux](https://github.com/collin80/SavvyCAN/releases/download/V208/SavvyCAN-x86_64.AppImage)**: AppImage for Linux users.
-- **[SavvyCAN Mac OS](https://github.com/collin80/SavvyCAN/releases/download/V208/SavvyCAN.dmg)**: DMG package for Mac OS users.
+
+#### Third-Party Software 
+- **[Busmaster,CANViewer,etc...](https://www.jianguoyun.com/p/DfuYpksQpdSrBxjO-p0GIAA)**: (Password：hibqbp)，Busmaster is An open-source PC software for the design, monitoring, analysis, and simulation of CAN networks.
+
 
 ### 🚀 How To Use SavvyCAN
 
@@ -76,18 +74,16 @@ For detailed instructions on using SavvyCAN, please refer to the [SavvyCAN Offic
 - **[硬件手册](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd#id-2-hardware-manual)**: 详细的硬件规格和引脚定义。
 - **[快速入门指南](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/quick-start-guide)**: 帮助您快速启动和运行设备的步骤说明。
 - **[CAN FD 协议](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/can-fd-protocal)**: 关于 CAN FD 标准和数据速率的信息。
-- **[软件手册 (SavvyCAN)](https://www.savvycan.com/docs/)**: SavvyCAN 软件的官方文档。
 
 ### 💻 软件支持
 
 #### Windows 软件
 - **[SavvyCAN FD](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FkOVFVvzO53fwzjprHC3b%2Fuploads%2FXWsnIRO7RFNQBn8b8Hdv%2FSavvyCAN-FD.zip?alt=media&token=69a374d1-501b-4e08-abd3-9a4f8977f5a2)**: 下载适用于 Windows 的官方 SavvyCAN FD 软件。
+- **Linux Can-Utils**: 包含在本仓库的 `3_Linux_Soft_SocketCAN` 文件夹中。
+
 
 #### 第三方软件（仅供测试）
-- **Linux Can-Utils**: 包含在本仓库的 `3_Linux_Soft_SocketCAN` 文件夹中。
-- **[Windows Busmaster](https://rbei-etas.github.io/busmaster/)**: 一款开源的 PC 软件，用于 CAN 网络的设计、监控、分析和仿真。
-- **[SavvyCAN Linux](https://github.com/collin80/SavvyCAN/releases/download/V208/SavvyCAN-x86_64.AppImage)**: 适用于 Linux 用户的 AppImage。
-- **[SavvyCAN Mac OS](https://github.com/collin80/SavvyCAN/releases/download/V208/SavvyCAN.dmg)**: 适用于 Mac OS 用户的 DMG 安装包。
+- **[Busmaster,CANViewer,etc...](https://www.jianguoyun.com/p/DfuYpksQpdSrBxjO-p0GIAA)**: (Password：hibqbp)，Busmaster 是An open-source PC software for the design, monitoring, analysis, and simulation of CAN networks.
 
 ### 🚀 如何使用 SavvyCAN
 

@@ -1,103 +1,496 @@
-# Pibiger USB TO CAN FD Device (SavvyCAN-FD Series)
+# PIBIGER USB-CAN FD Device (SavvyCAN-FD Series)
 
-[English](#english) | [中文](#chinese)
+**Professional USB-CAN FD Interface with CANVIEWER & SDK**
 
-<a id="english"></a>
-## 🇬🇧 English
-
-Welcome to the **pu2canfd-c** repository by Pibiger Technology. This repository provides the software, drivers, and documentation for the **Pibiger USB TO CAN FD Device (SavvyCAN-FD Series)**, specifically the **SavvyCAN-FD-C** model.
-
-> **Note:** This repository is dedicated to CAN FD communication and does not contain any references to PCAN.
-
-### 🌟 Features
-
-- **SocketCAN Compatible**: Pibiger SavvyCAN Series Products are fully compatible SocketCAN devices.
-- **SavvyCAN Support**: Officially provides SavvyCAN Software support for CAN FD.
-- **Third-Party Compatibility**: Compatible with Busmaster, Socket CAN, and other standard tools.
-- **High-Speed Data Transfer**: Supports CAN FD bit rates from 25 kbit/s up to a maximum of 12 Mbit/s.
-- **Precision Timing**: Timestamp resolution up to 1μs.
-- **Robust Isolation**: Each CAN FD signal and power line is separately isolated against USB up to 2.5KV.
-
-### 📚 Documentation
-
-- **[Hardware Manual](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd#id-2-hardware-manual)**: Detailed hardware specifications and pinouts.
-- **[Quick Start Guide](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/quick-start-guide)**: Step-by-step instructions to get your device running.
-- **[CAN FD Protocol](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/can-fd-protocal)**: Information on the CAN FD standard and data rates.
-
-### 💻 Software Support
-
-#### Windows Software
-- **[SavvyCAN FD](https://www.pibiger-tech.com/wp-content/uploads/2023/07/SavvyCAN-Support-FD.zip)**: Download the official SavvyCAN FD software for Windows.
-- **Linux Can-Utils**: Included in the `3_Linux_Soft_SocketCAN` folder of this repository.
-
-#### Third-Party Software 
-- **[Busmaster,CANViewer,etc...](https://www.jianguoyun.com/p/DfuYpksQpdSrBxjO-p0GIAA)**: (Password：hibqbp)，Busmaster is An open-source PC software for the design, monitoring, analysis, and simulation of CAN networks.
-
-
-### 🚀 How To Use SavvyCAN
-
-For detailed instructions on using SavvyCAN, please refer to the [SavvyCAN Official Website](https://www.savvycan.com/) and its [Documentation](https://www.savvycan.com/docs/). Key topics include:
-1. Main / Start Up Screen
-2. Loading And Saving Frames
-3. Filters and DBC File Manager
-4. Connection Window & Debugging
-5. Graphing Window & Real Time Graphing
-6. Flow View & Sniffer Window
-7. ISO-TP Decoder & UDS Scan Window
-8. Playback & Custom Sender Window
-9. Scripting Interface
-
-### 🔗 Useful Links
-- [Pibiger Official Website](https://www.pibiger-tech.com/)
-- [Pibiger Documentation Center](https://docs.pibiger-tech.com/)
+![License](https://img.shields.io/badge/License-Free-green) ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-blue) ![Standard](https://img.shields.io/badge/Standard-SocketCAN%20%7C%20CAN%20FD-blue)
 
 ---
 
-<a id="chinese"></a>
-## 🇨🇳 中文
+## 🎯 Overview
 
-欢迎访问 Pibiger Technology 的 **pu2canfd-c** 仓库。本仓库提供了 **Pibiger USB 转 CAN FD 设备（SavvyCAN-FD 系列）**（特别是 **SavvyCAN-FD-C** 型号）的软件、驱动程序和相关文档。
+**PIBIGER USB-CAN FD Device** is a professional-grade USB interface for CAN/CAN FD bus communication. It provides:
 
-> **注意：** 本仓库专注于 CAN FD 通信，不包含任何与 PCAN 相关的引用。
+- **CANVIEWER** — A powerful GUI application for real-time CAN bus monitoring, analysis, and debugging
+- **CANVIEWER-SDK** — A comprehensive C API for custom application development
+- **SocketCAN Support** — Full Linux SocketCAN integration
+- **CAN FD Compliance** — Support for high-speed CAN FD communication (up to 12 Mbit/s)
+- **Professional Tools** — Includes SavvyCAN, Busmaster, and other industry-standard software
 
-### 🌟 产品特性
+---
 
-- **兼容 SocketCAN**: Pibiger SavvyCAN 系列产品是完全兼容的 SocketCAN 设备。
-- **支持 SavvyCAN**: 官方提供支持 CAN FD 的 SavvyCAN 软件。
-- **第三方兼容性**: 兼容 Busmaster、Socket CAN 等标准工具。
-- **高速数据传输**: 支持 CAN FD 波特率，从最低 25 kbit/s 到最高 12 Mbit/s。
-- **高精度时间戳**: 时间戳分辨率高达 1μs。
-- **强大的隔离保护**: 每个 CAN FD 信号和电源均与 USB 独立隔离，隔离电压高达 2.5KV。
+## 📦 What's Included
 
-### 📚 文档资料
+### Windows Software
 
-- **[硬件手册](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd#id-2-hardware-manual)**: 详细的硬件规格和引脚定义。
-- **[快速入门指南](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/quick-start-guide)**: 帮助您快速启动和运行设备的步骤说明。
-- **[CAN FD 协议](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/can-fd-protocal)**: 关于 CAN FD 标准和数据速率的信息。
+| Component | Details |
+|-----------|---------|
+| **CANVIEWER** | Professional GUI for CAN bus monitoring and analysis |
+| **CANVIEWER-SDK** | C API for custom Windows applications |
+| **SavvyCAN** | Advanced CAN analysis and scripting tool |
+| **Busmaster** | Open-source CAN network design and simulation software |
+| **Drivers** | WinUSB drivers (bundled with Zadig installer) |
 
-### 💻 软件支持
+### Linux Software
 
-#### Windows 软件
-- **[SavvyCAN FD](https://www.pibiger-tech.com/wp-content/uploads/2023/07/SavvyCAN-Support-FD.zip)**: 下载适用于 Windows 的官方 SavvyCAN FD 软件。
-- **Linux Can-Utils**: 包含在本仓库的 `3_Linux_Soft_SocketCAN` 文件夹中。
+| Component | Details |
+|-----------|---------|
+| **can-utils** | Standard SocketCAN utilities (candump, cansend, etc.) |
+| **SocketCAN** | Native Linux kernel CAN support |
+| **udev Rules** | Automatic device recognition and permissions |
 
+---
 
-#### 第三方软件（仅供测试）
-- **[Busmaster,CANViewer,etc...](https://www.jianguoyun.com/p/DfuYpksQpdSrBxjO-p0GIAA)**: (Password：hibqbp)，Busmaster 是An open-source PC software for the design, monitoring, analysis, and simulation of CAN networks.
+## 🚀 Quick Start
 
-### 🚀 如何使用 SavvyCAN
+### Windows
 
-有关使用 SavvyCAN 的详细说明，请参阅 [SavvyCAN 官方网站](https://www.savvycan.com/) 及其 [文档中心](https://www.savvycan.com/docs/)。主要涵盖的主题包括：
-1. 主界面 / 启动屏幕
-2. 加载和保存数据帧
-3. 过滤器和 DBC 文件管理器
-4. 连接窗口与调试
-5. 绘图窗口与实时绘图
-6. 数据流视图与嗅探器窗口
-7. ISO-TP 解码器与 UDS 扫描窗口
-8. 回放与自定义发送窗口
-9. 脚本接口
+#### 1. Install WinUSB Driver
 
-### 🔗 相关链接
-- [Pibiger 官方网站](https://www.pibiger-tech.com/)
-- [Pibiger 文档中心](https://docs.pibiger-tech.com/)
+```
+1. Extract the repository
+2. Run: 2-WIN_Software/tools/zadig-2.9.exe as Administrator
+3. Select your PIBIGER USB-CAN device
+4. Click "Replace Driver" to install WinUSB
+5. Restart the computer (recommended)
+```
+
+#### 2. Launch CANVIEWER
+
+```
+Double-click: 2-WIN_Software/Release/canviewer.exe
+```
+
+The GUI should launch and automatically detect connected CAN devices.
+
+### Linux
+
+#### 1. Install SocketCAN Tools
+
+```bash
+sudo apt update
+sudo apt install -y can-utils
+```
+
+#### 2. Load SocketCAN Driver
+
+```bash
+# For PIBIGER USB-CAN devices
+sudo modprobe can_dev
+sudo modprobe can_usb
+```
+
+#### 3. View CAN Traffic
+
+```bash
+# List available CAN interfaces
+ip link show
+
+# Monitor CAN traffic
+candump can0
+
+# Send a CAN message
+cansend can0 123#1122334455667788
+```
+
+---
+
+## 💻 CANVIEWER GUI Application
+
+### Features
+
+- **Real-time Monitoring** — Live CAN bus traffic visualization
+- **Message Filtering** — Advanced filtering by ID, data patterns, and frame types
+- **Graphing** — Plot CAN signals over time
+- **Message Logging** — Record and replay CAN traffic
+- **Protocol Analysis** — Built-in support for common automotive protocols
+- **Trigger & Capture** — Capture specific message sequences
+- **Data Export** — Export to CSV, DBC, and other formats
+
+### User Interface
+
+```
+┌─────────────────────────────────────────────────┐
+│ CANVIEWER - CAN Bus Monitor & Analyzer          │
+├─────────────────────────────────────────────────┤
+│ Device: [PIBIGER USB-CAN FD v1.0]  [Connect]   │
+├─────────────────────────────────────────────────┤
+│ Bitrate: 500 kbps  |  Frames: 1,234  |  Errors: 0
+├─────────────────────────────────────────────────┤
+│ ID      | DLC | Data                | Time      │
+│ 0x123   | 8   | 11 22 33 44 55 66 77 88 | 12:34:56│
+│ 0x456   | 4   | AA BB CC DD          | 12:34:57│
+│ 0x789   | 2   | FF EE                | 12:34:58│
+├─────────────────────────────────────────────────┤
+│ [Save] [Load] [Clear] [Export] [Settings]      │
+└─────────────────────────────────────────────────┘
+```
+
+### Quick Start
+
+1. **Connect Device**: Click "Connect" and select your PIBIGER device
+2. **Set Bitrate**: Choose 250k, 500k, 1M, or custom value
+3. **Monitor Traffic**: Messages appear in real-time as they arrive
+4. **Filter Messages**: Use ID range or data pattern filters
+5. **Log Data**: Click "Record" to save traffic to file
+6. **Analyze**: Use graphing and protocol analysis tools
+
+---
+
+## 🔧 CANVIEWER-SDK (C API)
+
+### Overview
+
+The **CANVIEWER-SDK** provides a simple, cross-compiler-friendly C API for developing custom CAN applications.
+
+### Key Features
+
+- **Simple C API** — Easy-to-use functions for CAN communication
+- **Device Discovery** — Automatically find connected CAN devices
+- **Message Filtering** — Hardware-level frame filtering
+- **Statistics** — Real-time bus statistics and error monitoring
+- **CAN FD Support** — Full support for CAN FD frames (up to 64 bytes)
+- **Microsecond Timestamps** — Precise timing for time-critical applications
+
+### SDK Structure
+
+```
+V5-SDK-DLL-CUS/
+├── README.md                     SDK documentation
+├── DEVELOPMENT.md                Development guide
+├── bin/
+│   ├── usb_can.dll              SDK library
+│   └── can_example.exe          Example application
+├── lib/
+│   └── usb_can.lib              Import library (for linking)
+├── include/can/
+│   ├── usb_can_sdk.h            Main header file
+│   ├── can_types.h              Type definitions
+│   └── can_device.h             Device control API
+└── example/
+    └── basic_can.c              Complete example code
+```
+
+### Basic Workflow
+
+```c
+#include "can/usb_can_sdk.h"
+#include <stdio.h>
+
+int main(void) {
+    /* 1. Initialize SDK */
+    can_sdk_init();
+
+    /* 2. Discover devices */
+    can_device_info_t devices[8];
+    int count = can_discover(devices, 8);
+    if (count <= 0) {
+        printf("No CAN devices found.\n");
+        return 1;
+    }
+
+    /* 3. Open first device */
+    can_handle_t handle;
+    can_open(&handle, devices[0].index);
+
+    /* 4. Configure CAN parameters */
+    can_config_t config = {0};
+    config.bitrate = 500000;  /* 500 kbps */
+    can_configure(handle, &config);
+
+    /* 5. Start communication */
+    can_start(handle);
+
+    /* 6. Send a CAN message */
+    can_msg_t tx_msg = {0};
+    tx_msg.id = 0x123;
+    tx_msg.dlc = 8;
+    for (int i = 0; i < 8; i++) tx_msg.data[i] = i;
+    can_send(handle, &tx_msg);
+
+    /* 7. Receive messages */
+    can_msg_t rx_msgs[16];
+    int rx_count = can_receive(handle, rx_msgs, 16, 1000);
+    for (int i = 0; i < rx_count; i++) {
+        printf("RX ID=0x%X DLC=%u\n", rx_msgs[i].id, rx_msgs[i].dlc);
+    }
+
+    /* 8. Cleanup */
+    can_stop(handle);
+    can_close(handle);
+    can_sdk_shutdown();
+
+    return 0;
+}
+```
+
+### Compilation (Windows)
+
+#### Using MSVC Command Line
+
+```cmd
+cl your_app.c /I path\to\include /link path\to\lib\usb_can.lib
+copy path\to\bin\usb_can.dll .
+your_app.exe
+```
+
+#### Using CMake
+
+```cmake
+cmake_minimum_required(VERSION 3.16)
+project(my_can_app LANGUAGES C)
+
+set(SDK_DIR path/to/V5-SDK-DLL-CUS)
+
+add_executable(my_app main.c)
+target_include_directories(my_app PRIVATE ${SDK_DIR}/include)
+target_link_libraries(my_app PRIVATE ${SDK_DIR}/lib/usb_can.lib)
+
+# Copy DLL to output directory
+add_custom_command(TARGET my_app POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        ${SDK_DIR}/bin/usb_can.dll $<TARGET_FILE_DIR:my_app>)
+```
+
+### Core API Functions
+
+#### Initialization & Discovery
+
+```c
+can_status_t can_sdk_init(void);
+void         can_sdk_shutdown(void);
+int          can_discover(can_device_info_t *devices, int max_count);
+```
+
+#### Device Control
+
+```c
+can_status_t can_open(can_handle_t *handle, int device_index);
+void         can_close(can_handle_t handle);
+can_status_t can_start(can_handle_t handle);
+can_status_t can_stop(can_handle_t handle);
+```
+
+#### Configuration
+
+```c
+can_status_t can_configure(can_handle_t handle, const can_config_t *config);
+can_status_t can_get_config(can_handle_t handle, can_config_t *config);
+```
+
+#### Message Transfer
+
+```c
+can_status_t can_send(can_handle_t handle, const can_msg_t *msg);
+int          can_receive(can_handle_t handle, can_msg_t *msgs, 
+                         int max_count, uint32_t timeout_ms);
+```
+
+#### Statistics & Diagnostics
+
+```c
+can_status_t can_get_stats(can_handle_t handle, can_stats_t *stats);
+can_status_t can_reset_stats(can_handle_t handle);
+const char*  can_status_str(can_status_t status);
+```
+
+### Data Structures
+
+#### CAN Message
+
+```c
+typedef struct {
+    uint32_t id;            /* CAN ID (11-bit or 29-bit) */
+    uint8_t  dlc;           /* Data length (0-8 or CAN FD 0-64) */
+    uint8_t  flags;         /* Flags (CAN_FLAG_*) */
+    uint8_t  data[64];      /* Message data */
+    uint64_t timestamp_us;  /* Microsecond timestamp */
+} can_msg_t;
+```
+
+#### Configuration
+
+```c
+typedef struct {
+    uint32_t bitrate;           /* Arbitration bitrate (e.g., 500000) */
+    uint32_t sample_point;      /* Sample point (1000=100%, 875=87.5%) */
+    uint8_t  canfd_enabled;     /* 0=Classic CAN, 1=CAN FD */
+    uint32_t data_bitrate;      /* FD data bitrate */
+    uint32_t data_sample_point; /* FD data sample point */
+} can_config_t;
+```
+
+### Common Tasks
+
+#### 1. Send a Standard CAN Message
+
+```c
+can_msg_t msg = {0};
+msg.id = 0x100;
+msg.dlc = 2;
+msg.data[0] = 0xAA;
+msg.data[1] = 0xBB;
+can_send(handle, &msg);
+```
+
+#### 2. Send Extended Frame (29-bit ID)
+
+```c
+can_msg_t msg = {0};
+msg.id = 0x18FF50E0;
+msg.dlc = 8;
+msg.flags = CAN_FLAG_EXTENDED;
+can_send(handle, &msg);
+```
+
+#### 3. Send CAN FD Frame
+
+```c
+can_config_t cfg = {0};
+cfg.bitrate = 500000;
+cfg.canfd_enabled = 1;
+cfg.data_bitrate = 2000000;
+can_configure(handle, &cfg);
+can_start(handle);
+
+can_msg_t fd_msg = {0};
+fd_msg.id = 0x200;
+fd_msg.dlc = 64;  /* Full CAN FD payload */
+fd_msg.flags = CAN_FLAG_FD | CAN_FLAG_BRS;
+can_send(handle, &fd_msg);
+```
+
+#### 4. Blocking Receive with Timeout
+
+```c
+can_msg_t buffer[32];
+int count = can_receive(handle, buffer, 32, 100);  /* 100ms timeout */
+for (int i = 0; i < count; i++) {
+    printf("[%llu us] ID=0x%X DLC=%u\n", 
+           (unsigned long long)buffer[i].timestamp_us,
+           buffer[i].id, buffer[i].dlc);
+}
+```
+
+#### 5. Monitor Bus State
+
+```c
+can_stats_t stats;
+can_get_stats(handle, &stats);
+if (stats.bus_state == CAN_STATE_BUS_OFF) {
+    printf("Bus-off detected! Resetting...\n");
+    can_reset(handle);
+    can_start(handle);
+}
+```
+
+---
+
+## 📚 Third-Party Software
+
+### SavvyCAN
+
+Advanced CAN analysis and scripting platform with:
+- Message filtering and graphing
+- Protocol decoding (UDS, J1939, ISO-TP)
+- Scripting interface for automation
+- Real-time data visualization
+
+**Download:** Included in `2-WIN_Software/SavvyCAN-FD.zip`
+
+### Busmaster
+
+Open-source CAN network design and simulation software:
+- Message generation and transmission
+- Bus monitoring and analysis
+- Protocol simulation
+- Network testing
+
+**Download:** Available in `4_ThirdParty_Soft/` folder
+
+---
+
+## 🔌 Supported Hardware
+
+### PIBIGER USB-CAN FD Devices
+
+| Model | Interface | CAN Standard | Features |
+|-------|-----------|--------------|----------|
+| **SavvyCAN-FD-C** | USB 2.0 | CAN / CAN FD | SocketCAN, 2.5kV isolation |
+
+### Compatibility
+
+- **Windows 10/11** x64
+- **Linux** (Ubuntu 22.04+, Debian 12+, Raspberry Pi OS)
+- **PEAK PCAN-USB** compatible
+- **SocketCAN** compliant
+
+---
+
+## 📋 System Requirements
+
+### Windows
+
+- **OS:** Windows 10 (build 1809+) or Windows 11 x64
+- **USB:** USB 2.0 or higher
+- **Driver:** WinUSB (installed via Zadig)
+- **Runtime:** Bundled (Qt6, libusb)
+
+### Linux
+
+- **OS:** Ubuntu 22.04 LTS or newer, Debian 12+
+- **USB:** USB 2.0 or higher
+- **Packages:** `can-utils`, `libusb-1.0-0`
+- **Compiler:** GCC 11+ (for SDK development)
+
+---
+
+## 🛠️ Troubleshooting
+
+### Windows
+
+**Issue:** Device not detected
+- **Solution:** Ensure WinUSB driver is installed using Zadig. Check Device Manager for the device.
+
+**Issue:** CANVIEWER won't start
+- **Solution:** Verify all DLL files are in the same directory. Run as Administrator if needed.
+
+**Issue:** "usb_can.dll not found"
+- **Solution:** Copy `usb_can.dll` from `bin/` to your application directory.
+
+### Linux
+
+**Issue:** Permission denied accessing CAN interface
+- **Solution:** Add your user to the `dialout` group: `sudo usermod -aG dialout $USER`
+
+**Issue:** CAN interface not appearing
+- **Solution:** Ensure the device is connected and SocketCAN driver is loaded: `sudo modprobe can_dev can_usb`
+
+---
+
+## 📞 Support & Documentation
+
+- **SDK Documentation:** See `2-WIN_Software/V5-SDK-DLL-CUS/README.md`
+- **Development Guide:** See `2-WIN_Software/V5-SDK-DLL-CUS/DEVELOPMENT.md`
+- **Example Code:** See `2-WIN_Software/V5-SDK-DLL-CUS/example/basic_can.c`
+- **Technical Support:** Contact PIBIGER support team
+
+---
+
+## 📄 License
+
+This software is provided as-is. See LICENSE file for details.
+
+---
+
+## 🔗 Related Resources
+
+- [CAN FD Standard](https://www.can-cia.org/can-knowledge/can/can-fd/)
+- [SocketCAN Documentation](https://www.kernel.org/doc/html/latest/networking/can.html)
+- [PEAK PCAN Documentation](https://www.peak-system.com/PCAN-USB.199.0.html)
+- [Zadig USB Driver Installer](https://zadig.akeo.ie/)
+
+---
+
+**Last Updated:** May 8, 2026  
+**SDK Version:** 5.0  
+**Status:** ✅ Production Ready

@@ -1,4 +1,4 @@
-# PIBIGER USB-CAN FD Device (SavvyCAN-FD Series)
+# PIBIGER SavvyCAN-FD Series
 
 **Professional USB-CAN FD Interface with CANVIEWER & SDK**
 
@@ -8,7 +8,7 @@
 
 ## 🎯 Overview
 
-**PIBIGER USB-CAN FD Device (SavvyCAN-FD Series)** is a professional-grade USB interface for CAN/CAN FD bus communication. It provides:
+**PIBIGER SavvyCAN-FD Series** provides professional-grade USB interfaces for CAN/CAN FD bus communication. The series includes single-channel and dual-channel models designed for different application requirements. All models provide:
 
 - **CANVIEWER** — A powerful GUI application for real-time CAN bus monitoring, analysis, and debugging
 - **CANVIEWER-SDK** — A comprehensive C API for custom application development
@@ -31,21 +31,48 @@
 
 ---
 
-## 🔧 Hardware Specifications
+## 🔧 Detailed Hardware Specifications
+
+### Common Specifications (All Models)
 
 | Specification | Details |
 |---------------|----------|
-| **Interface** | USB 2.0 High-Speed |
 | **CAN Standard** | CAN 2.0B / CAN FD |
-| **Bitrate Range** | 25 kbit/s to 12 Mbit/s |
 | **Arbitration Bitrate** | 25 kbit/s to 1 Mbit/s |
 | **Data Bitrate (FD)** | Up to 12 Mbit/s |
 | **Timestamp Resolution** | 1 microsecond |
-| **Galvanic Isolation** | 2.5 kV (signal and power) |
-| **Connectors** | USB Type-A, CAN D-Sub 9-pin |
+| **Galvanic Isolation** | 2.5 kV per channel (signal and power) |
 | **Operating Temperature** | 0°C to 50°C |
-| **Power Supply** | USB bus powered |
+| **Storage Temperature** | -20°C to 70°C |
+| **Humidity** | 10% to 90% (non-condensing) |
+| **Power Supply** | USB bus powered (5V) |
+| **Power Consumption** | < 500 mA per channel |
+| **USB Protocol** | USB 2.0 High-Speed (480 Mbps) |
+| **Compliance** | CE, FCC certified |
+
+### SavvyCAN-FD-C Specifications
+
+| Specification | Details |
+|---------------|----------|
+| **Channels** | 1 × CAN/CAN FD |
+| **Connectors** | USB Type-A, 1 × CAN D-Sub 9-pin |
 | **Dimensions** | Compact desktop form factor |
+| **Weight** | Lightweight portable |
+| **Termination** | 120Ω termination resistor (switchable) |
+| **LED Indicators** | Power, CAN Activity, Error status |
+
+### SavvyCAN-FD-X2 Specifications
+
+| Specification | Details |
+|---------------|----------|
+| **Channels** | 2 × CAN/CAN FD (fully independent) |
+| **Connectors** | USB Type-A, 2 × CAN D-Sub 9-pin |
+| **Dimensions** | Compact desktop form factor |
+| **Weight** | Lightweight portable |
+| **Termination** | 120Ω termination resistor per channel (switchable) |
+| **LED Indicators** | Power, CAN1 Activity, CAN2 Activity, Error status |
+| **Channel Isolation** | Complete electrical isolation between channels |
+| **Simultaneous Operation** | Both channels can operate independently at different bitrates |
 
 ---
 
@@ -57,7 +84,41 @@
 
 ---
 
-## 📦 What's Included (SavvyCAN-FD-C Model)
+## 📋 Product Models
+
+The SavvyCAN-FD Series includes two main models:
+
+### SavvyCAN-FD-C (Single Channel)
+
+| Feature | Details |
+|---------|----------|
+| **Channels** | 1 × CAN/CAN FD |
+| **Interface** | USB 2.0 High-Speed |
+| **Bitrate** | 25 kbit/s - 12 Mbit/s |
+| **Isolation** | 2.5 kV galvanic isolation |
+| **Connectors** | USB Type-A, CAN D-Sub 9-pin |
+| **Form Factor** | Compact desktop |
+| **Power** | USB bus powered |
+| **Applications** | Single CAN network monitoring, automotive diagnostics, embedded systems |
+| **Product Link** | [View Product](https://www.pibiger-tech.com/product/savvycan-fd-c/) |
+
+### SavvyCAN-FD-X2 (Dual Channel)
+
+| Feature | Details |
+|---------|----------|
+| **Channels** | 2 × CAN/CAN FD (independent) |
+| **Interface** | USB 2.0 High-Speed |
+| **Bitrate** | 25 kbit/s - 12 Mbit/s (per channel) |
+| **Isolation** | 2.5 kV galvanic isolation (per channel) |
+| **Connectors** | USB Type-A, 2 × CAN D-Sub 9-pin |
+| **Form Factor** | Compact desktop |
+| **Power** | USB bus powered |
+| **Applications** | Multi-network monitoring, CAN gateway, network bridging, complex automotive systems |
+| **Product Link** | [View Product](https://www.pibiger-tech.com/product/savvycan-fd-x2/) |
+
+---
+
+## 📦 What's Included
 
 ### Windows Software
 
@@ -448,19 +509,21 @@ Open-source CAN network design and simulation software:
 
 ---
 
-## 🔌 Supported Hardware
+### Supported Hardware
 
-### PIBIGER USB-CAN FD Devices
+**PIBIGER SavvyCAN-FD Series** — All models fully supported
 
-| Model | Interface | CAN Standard | Features |
-|-------|-----------|--------------|----------|
-| **SavvyCAN-FD-C** | USB 2.0 | CAN / CAN FD | SocketCAN, 2.5kV isolation |
+| Model | Channels | Bitrate | Features | Certifications |
+|-------|----------|---------|----------|----------------|
+| **SavvyCAN-FD-C** | 1 | 25 kbit/s - 12 Mbit/s | Single channel, compact | CE, FCC |
+| **SavvyCAN-FD-X2** | 2 | 25 kbit/s - 12 Mbit/s | Dual channel, independent | CE, FCC |
 
-### Compatibility
+### Platform Compatibility
 
 - **Windows 10/11** x64
 - **Linux** (Ubuntu 22.04+, Debian 12+, Raspberry Pi OS)
 - **SocketCAN** compliant
+- **CAN FD** standard compliantt
 
 ---
 

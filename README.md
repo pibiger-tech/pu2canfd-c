@@ -577,12 +577,6 @@ Open-source CAN network design and simulation software:
 
 ---
 
-## 📄 License
-
-This software is provided as-is. See LICENSE file for details.
-
----
-
 ## 🔗 Related Resources
 
 - [CAN FD Standard](https://www.can-cia.org/can-knowledge/can/can-fd/)

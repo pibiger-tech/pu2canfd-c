@@ -460,7 +460,6 @@ Open-source CAN network design and simulation software:
 
 - **Windows 10/11** x64
 - **Linux** (Ubuntu 22.04+, Debian 12+, Raspberry Pi OS)
-- **PEAK PCAN-USB** compatible
 - **SocketCAN** compliant
 
 ---
@@ -525,7 +524,6 @@ This software is provided as-is. See LICENSE file for details.
 
 - [CAN FD Standard](https://www.can-cia.org/can-knowledge/can/can-fd/)
 - [SocketCAN Documentation](https://www.kernel.org/doc/html/latest/networking/can.html)
-- [PEAK PCAN Documentation](https://www.peak-system.com/PCAN-USB.199.0.html)
 - [Zadig USB Driver Installer](https://zadig.akeo.ie/)
 
 ---

@@ -8,7 +8,7 @@
 
 ## 🎯 Overview
 
-**PIBIGER USB-CAN FD Device** is a professional-grade USB interface for CAN/CAN FD bus communication. It provides:
+**PIBIGER USB-CAN FD Device (SavvyCAN-FD Series)** is a professional-grade USB interface for CAN/CAN FD bus communication. It provides:
 
 - **CANVIEWER** — A powerful GUI application for real-time CAN bus monitoring, analysis, and debugging
 - **CANVIEWER-SDK** — A comprehensive C API for custom application development
@@ -18,7 +18,46 @@
 
 ---
 
-## 📦 What's Included
+## ⭐ Key Features
+
+- **SocketCAN Compatible** — Fully compatible SocketCAN devices for Linux systems
+- **SavvyCAN Support** — Official SavvyCAN software support for CAN FD communication
+- **Third-Party Compatibility** — Compatible with Busmaster, SocketCAN, and other standard tools
+- **High-Speed Data Transfer** — Supports CAN FD bit rates from 25 kbit/s up to 12 Mbit/s maximum
+- **Precision Timing** — Timestamp resolution up to 1 microsecond for accurate timing analysis
+- **Robust Isolation** — Each CAN FD signal and power line separately isolated against USB up to 2.5 kV
+- **Professional Analysis Tools** — Built-in message filtering, graphing, and protocol analysis
+- **Cross-Platform** — Windows and Linux support with native drivers
+
+---
+
+## 🔧 Hardware Specifications
+
+| Specification | Details |
+|---------------|----------|
+| **Interface** | USB 2.0 High-Speed |
+| **CAN Standard** | CAN 2.0B / CAN FD |
+| **Bitrate Range** | 25 kbit/s to 12 Mbit/s |
+| **Arbitration Bitrate** | 25 kbit/s to 1 Mbit/s |
+| **Data Bitrate (FD)** | Up to 12 Mbit/s |
+| **Timestamp Resolution** | 1 microsecond |
+| **Galvanic Isolation** | 2.5 kV (signal and power) |
+| **Connectors** | USB Type-A, CAN D-Sub 9-pin |
+| **Operating Temperature** | 0°C to 50°C |
+| **Power Supply** | USB bus powered |
+| **Dimensions** | Compact desktop form factor |
+
+---
+
+## 📚 Documentation
+
+- **[Hardware Manual](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd#id-2-hardware-manual)** — Detailed hardware specifications and pinouts
+- **[Quick Start Guide](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/quick-start-guide)** — Step-by-step instructions to get your device running
+- **[CAN FD Protocol](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/can-fd-protocal)** — Information on CAN FD standard and data rates
+
+---
+
+## 📦 What's Included (SavvyCAN-FD-C Model)
 
 ### Windows Software
 

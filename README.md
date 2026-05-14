@@ -107,7 +107,6 @@ All three packages share the same SDK source tree and the same underlying shared
 
 | Backend | Platform | Hardware |
 | :--- | :--- | :--- |
-| PCAN-compatible (vendor runtime DLL) | Windows | PCAN-USB / PCAN-USB FD class adapters |
 | libusb + gs_usb protocol | Windows / Linux | candleLight-compatible USB-CAN adapters |
 | SocketCAN | Linux | Any kernel-supported CAN interface (`can0`, `vcan0`, etc.) |
 
@@ -115,9 +114,7 @@ All three packages share the same SDK source tree and the same underlying shared
 
 ```
 1. Extract V5-SDK-DLL-CUS.zip to any directory (e.g., D:\usbcan\)
-2. Plug in the USB-CAN adapter
-   - For PCAN-compatible adapters: install the vendor driver per manufacturer's instructions
-   - For candleLight / gs_usb adapters: Windows recognizes the device out-of-the-box — no driver install needed
+2. Plug in the USB-CAN adapter — Windows recognizes candleLight / gs_usb devices out-of-the-box, no driver install needed
 3. Double-click run_SAVVYCANFD.bat → GUI launches and your adapter appears in the device list
 ```
 

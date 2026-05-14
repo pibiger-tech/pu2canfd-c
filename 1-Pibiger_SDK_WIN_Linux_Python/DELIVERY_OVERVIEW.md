@@ -1,10 +1,10 @@
-# USB-CAN SDK — Delivery Overview
+# SAVVYCANFD — Delivery Overview
 
 USB-CAN / CAN FD SDK with cross-platform binaries, GUI trace viewer, and
 reference examples.
 
 - **SDK version:** 5.0.0
-- **Last updated:** 2026-05-13
+- **Last updated:** 2026-05-14
 
 ---
 
@@ -70,9 +70,9 @@ adapt at runtime — see `can_get_device_info()`.
 ```
 V5-SDK-DLL-CUS/
 ├── README.md                       SDK overview
-├── run_viewer.bat                  Launch the GUI trace viewer (double-click)
+├── run_SAVVYCANFD.bat              Launch the GUI trace viewer (double-click)
 ├── bin/                            All runtime files (~45 MB, self-contained)
-│   ├── canviewer.exe               GUI trace viewer
+│   ├── SAVVYCANFD.exe              GUI trace viewer
 │   ├── can_example.exe             CLI capture demo
 │   ├── usb_can.dll                 SDK library
 │   ├── libusb-1.0.dll              USB transport (for candleLight / gs_usb adapters)
@@ -100,7 +100,7 @@ V5-SDK-DLL-CUS/
    manufacturer's instructions
    (For candleLight / gs_usb adapters) Windows recognizes the device
    out-of-the-box — no driver install needed
-4. Double-click D:\usbcan\V5-SDK-DLL-CUS\run_viewer.bat
+4. Double-click D:\usbcan\V5-SDK-DLL-CUS\run_SAVVYCANFD.bat
    → GUI launches and your adapter appears in the device list
 ```
 
@@ -146,11 +146,11 @@ V5-SDK-SO-CUS/
 │   │   ├── libusb_can.so.5         ← SONAME
 │   │   └── libusb_can.so.5.0.0     ← actual library
 │   ├── bin/
-│   │   ├── canviewer               GUI trace viewer
+│   │   ├── SAVVYCANFD              GUI trace viewer
 │   │   └── can_example             CLI capture demo
 │   ├── include/can/*.h             Public API headers (same set as Windows)
 │   ├── examples/basic_can.c        Sample source
-│   └── run_viewer.sh               Launch script
+│   └── run_SAVVYCANFD.sh           Launch script
 └── ubuntu22.04-arm64/              ARM64 (Pi 5 / Jetson / Rockchip)
     └── (same layout, ARM aarch64 binaries)
 ```
@@ -182,7 +182,7 @@ case "$(uname -m)" in
     x86_64)  cd ubuntu22.04-x64 ;;
     aarch64) cd ubuntu22.04-arm64 ;;
 esac
-./run_viewer.sh
+./run_SAVVYCANFD.sh
 ```
 
 > **Note**: The udev rule above grants user access without claiming
@@ -327,10 +327,10 @@ Or use `install_deps.bat` / `install_deps.sh` for an interactive prompt.
 | Package | `V5-SDK-DLL-CUS` | `V5-SDK-SO-CUS` | `V5-SDK-PYTHON-CUS` |
 | Main library | `bin\usb_can.dll` | `lib/libusb_can.so*` | Same `.dll` / `.so` (bundled in `_libs/<platform>/`) |
 | Link / import | `lib\usb_can.lib` | Link against `.so` | `import usb_can` (ctypes, no link step) |
-| GUI viewer | `bin\canviewer.exe` | `bin/canviewer` | (use C/C++ viewer; Python pkg is headless) |
+| GUI viewer | `bin\SAVVYCANFD.exe` | `bin/SAVVYCANFD` | (use C/C++ viewer; Python pkg is headless) |
 | CLI sample | `bin\can_example.exe` | `bin/can_example` | `examples\basic_capture.py` |
 | Sample source | `examples\basic_can.c` | Same | `examples\*.py` (2 scripts) |
-| Launch script | `run_viewer.bat` | `run_viewer.sh` | `run_basic_capture.bat` / `.sh` |
+| Launch script | `run_SAVVYCANFD.bat` | `run_SAVVYCANFD.sh` | `run_basic_capture.bat` / `.sh` |
 | Qt6 runtime | Bundled in `bin\` | System `libqt6widgets6` | Not used |
 | C runtime | Bundled in `bin\` | System `libc` | System Python interpreter |
 | USB library | Bundled `bin\libusb-1.0.dll` | System `libusb-1.0-0` | Bundled in `_libs/windows-x64/`, system on Linux |

@@ -257,8 +257,6 @@ The following Windows GUI applications are provided in `4-WIN_Software/`:
 
 | Application | Description |
 | :--- | :--- |
-| `SAVVYCANFD.zip` | Professional GUI for real-time CAN bus monitoring, filtering, logging, and analysis |
-| `SAVVYCANFD-SDK.zip` | C API SDK for developing custom Windows CAN applications |
 | `SavvyCAN-FD.zip` | Advanced open-source CAN analysis tool with scripting support |
 
 ---

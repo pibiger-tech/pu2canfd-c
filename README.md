@@ -11,7 +11,7 @@
 **PIBIGER SavvyCAN-FD Series** provides professional-grade USB interfaces for CAN/CAN FD bus communication. The series includes single-channel and dual-channel models designed for different application requirements. All models provide:
 
 - **SAVVYCANFD GUI** — A powerful GUI application for real-time CAN bus monitoring, analysis, and debugging
-- **Pibiger SDK** — A cross-platform C/C++ and Python API for custom application development
+- **SAVVYCANFD-SDK** — A cross-platform C/C++ and Python API for custom application development
 - **SocketCAN Support** — Full Linux SocketCAN integration
 - **CAN FD Compliance** — Support for high-speed CAN FD communication (up to 12 Mbit/s)
 
@@ -257,8 +257,8 @@ The following Windows GUI applications are provided in `4-WIN_Software/`:
 
 | Application | Description |
 | :--- | :--- |
-| `CANVIEWER.zip` | Professional GUI for real-time CAN bus monitoring, filtering, logging, and analysis |
-| `CANVIEWER-SDK.zip` | C API SDK for developing custom Windows CAN applications |
+| `SAVVYCANFD.zip` | Professional GUI for real-time CAN bus monitoring, filtering, logging, and analysis |
+| `SAVVYCANFD-SDK.zip` | C API SDK for developing custom Windows CAN applications |
 | `SavvyCAN-FD.zip` | Advanced open-source CAN analysis tool with scripting support |
 
 ---

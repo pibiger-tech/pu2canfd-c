@@ -67,8 +67,8 @@
 | Directory / File | Platform | Description |
 | :--- | :--- | :--- |
 | `0-Win_Driver/` | Windows | Windows driver download link |
-| `1-Pibiger_SDK_WIN_Linux_Python/` | Windows / Linux / Python | Pibiger SDK packages (see below) |
-| `2-MacOS_SDK/` | macOS | macOS SDK package |
+| `1-Pibiger_SDK_WIN_Linux_Python/` | Windows / Linux / macOS / Python | Pibiger SDK packages (see below) |
+| `2-MacOS_SDK/` | macOS | macOS SDK package (legacy) |
 | `3_Linux_Soft_SocketCAN/` | Linux | SocketCAN C examples, can-utils, Python examples |
 | `4-WIN_Software/` | Windows | CANVIEWER GUI, CANVIEWER-SDK, SavvyCAN-FD |
 | `5_ThirdParty_Soft/` | — | Third-party software download link |
@@ -197,9 +197,60 @@ with usb_can.Device(index=0) as dev:
 
 ## 2. macOS SDK
 
-A macOS SDK package is available in `2-MacOS_SDK/V5-SDK-MACOS-CUS.zip`.
+Native macOS builds of the SavvyCAN-FD GUI are available in `1-Pibiger_SDK_WIN_Linux_Python/`. Two separate packages are provided for Apple Silicon and Intel Macs.
 
-For macOS installation and usage details, refer to the README inside the package.
+### Available Packages
+
+| Package | Architecture | Description |
+| :--- | :--- | :--- |
+| `SAVVYCANFD-macOS-AppleSilicon-arm64.zip` | Apple Silicon (M1 / M2 / M3 / M4) | Native arm64 build |
+| `SAVVYCANFD-macOS-Intel-x86_64.zip` | Intel x86_64 | Native x86_64 build |
+
+> **Note:** A legacy macOS SDK package is also available in `2-MacOS_SDK/V5-SDK-MACOS-CUS.zip` for reference.
+
+### Quick Start
+
+**Step 1: Identify your Mac architecture**
+
+```bash
+uname -m
+# arm64  → use SAVVYCANFD-macOS-AppleSilicon-arm64.zip
+# x86_64 → use SAVVYCANFD-macOS-Intel-x86_64.zip
+```
+
+**Step 2: Extract and launch**
+
+```bash
+# Apple Silicon example
+unzip SAVVYCANFD-macOS-AppleSilicon-arm64.zip
+cd SAVVYCANFD-macOS-AppleSilicon-arm64
+open SAVVYCANFD.app
+```
+
+**Step 3: Allow the app to run (first launch only)**
+
+macOS Gatekeeper may block unsigned apps on first launch. If you see a security warning:
+
+1. Open **System Settings → Privacy & Security**
+2. Scroll to the Security section and click **Open Anyway** next to the SAVVYCANFD entry
+3. Confirm by clicking **Open** in the dialog
+
+Alternatively, remove the quarantine attribute via Terminal:
+
+```bash
+xattr -dr com.apple.quarantine SAVVYCANFD.app
+```
+
+### Connecting the Device
+
+Plug in the USB-CAN adapter. macOS recognizes candleLight / gs_usb devices automatically — no additional driver installation is required. The adapter will appear in the device list when SAVVYCANFD launches.
+
+### Supported macOS Versions
+
+| Package | Minimum macOS | Notes |
+| :--- | :--- | :--- |
+| Apple Silicon (arm64) | macOS 12 Monterey | Runs natively on M-series chips |
+| Intel (x86_64) | macOS 11 Big Sur | Runs natively on Intel; also runs via Rosetta 2 on Apple Silicon |
 
 ---
 

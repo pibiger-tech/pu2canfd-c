@@ -67,7 +67,7 @@
 | Directory / File | Platform | Description |
 | :--- | :--- | :--- |
 | `0-Win_Driver/` | Windows | Windows driver download link |
-| `1-Pibiger_SDK_WIN_Linux_Python/` | Windows / Linux / macOS / Python | Pibiger SDK packages (see below) |
+| `1-Pibiger_SDK_WIN_Linux_Python_MacOS/` | Windows / Linux / macOS / Python | Pibiger SDK packages (see below) |
 | `2-MacOS_SDK/` | macOS | macOS SDK package (legacy) |
 | `3_Linux_Soft_SocketCAN/` | Linux | SocketCAN C examples, can-utils, Python examples |
 | `4-WIN_Software/` | Windows | CANVIEWER GUI, CANVIEWER-SDK, SavvyCAN-FD |
@@ -82,7 +82,7 @@ The **Pibiger SDK** (version 5.0.0) is the recommended choice for developers who
 
 **SDK version**: 5.0.0 — **Last updated**: 2026-05-14
 
-For full delivery notes and package contents, see [`1-Pibiger_SDK_WIN_Linux_Python/DELIVERY_OVERVIEW.md`](./1-Pibiger_SDK_WIN_Linux_Python/DELIVERY_OVERVIEW.md).
+For full delivery notes and package contents, see [`1-Pibiger_SDK_WIN_Linux_Python_MacOS/DELIVERY_OVERVIEW.md`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/DELIVERY_OVERVIEW.md).
 
 ### Available Packages
 
@@ -197,7 +197,7 @@ with usb_can.Device(index=0) as dev:
 
 ## 2. macOS SDK
 
-Native macOS builds of the SavvyCAN-FD GUI are available in `1-Pibiger_SDK_WIN_Linux_Python/`. Two separate packages are provided for Apple Silicon and Intel Macs.
+Native macOS builds of the SavvyCAN-FD GUI are available in `1-Pibiger_SDK_WIN_Linux_Python_MacOS/`. Two separate packages are provided for Apple Silicon and Intel Macs.
 
 ### Available Packages
 

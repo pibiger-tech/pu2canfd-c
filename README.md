@@ -8,329 +8,77 @@
 
 ## Overview
 
-**PIBIGER SavvyCAN-FD Series** provides professional-grade USB interfaces for CAN/CAN FD bus communication. The series includes single-channel and dual-channel models designed for different application requirements. All models provide:
+**PIBIGER SavvyCAN-FD Series** provides professional-grade USB interfaces for CAN/CAN FD bus communication. The series includes single-channel and dual-channel models designed for different application requirements.
 
-- **SAVVYCANFD GUI** — A powerful GUI application for real-time CAN bus monitoring, analysis, and debugging
-- **SAVVYCANFD-SDK** — A cross-platform C/C++ and Python API for custom application development
+- **SAVVYCANFD GUI** — Real-time CAN bus monitoring, analysis, and debugging
+- **SAVVYCANFD SDK** — Cross-platform C/C++ and Python API for custom application development
 - **SocketCAN Support** — Full Linux SocketCAN integration
-- **CAN FD Compliance** — Support for high-speed CAN FD communication (up to 12 Mbit/s)
+- **CAN FD Compliance** — Up to 12 Mbit/s data bitrate
 
 ---
 
-## Key Features
-
-- **SocketCAN Compatible** — Fully compatible SocketCAN devices for Linux systems
-- **SavvyCAN Support** — Official SavvyCAN software support for CAN FD communication
-- **Third-Party Compatibility** — Compatible with Busmaster, SocketCAN, and other standard tools
-- **High-Speed Data Transfer** — Supports CAN FD bit rates from 25 kbit/s up to 12 Mbit/s maximum
-- **Precision Timing** — Timestamp resolution up to 1 microsecond for accurate timing analysis
-- **Robust Isolation** — Each CAN FD signal and power line separately isolated against USB up to 2.5 kV
-- **Cross-Platform** — Windows, Linux, and macOS support
-
----
-
-## Hardware Specifications
-
-### Common Specifications (All Models)
+## Key Specifications
 
 | Specification | Details |
 | :--- | :--- |
 | **CAN Standard** | CAN 2.0B / CAN FD |
-| **Arbitration Bitrate** | 25 kbit/s to 1 Mbit/s |
+| **Arbitration Bitrate** | 25 kbit/s – 1 Mbit/s |
 | **Data Bitrate (FD)** | Up to 12 Mbit/s |
-| **Timestamp Resolution** | 1 microsecond |
-| **Galvanic Isolation** | 2.5 kV per channel (signal and power) |
-| **Operating Temperature** | 0°C to 50°C |
+| **Timestamp Resolution** | 1 µs |
+| **Galvanic Isolation** | 2.5 kV per channel |
 | **Power Supply** | USB bus powered (5V) |
 | **USB Protocol** | USB 2.0 High-Speed (480 Mbps) |
-| **Compliance** | CE, FCC certified |
+| **Compliance** | CE, FCC |
+| **Operating Temperature** | 0°C to 50°C |
 
-### Product Models
+---
 
-| Model | Channels | Connectors | Applications | Product Link |
-| :--- | :--- | :--- | :--- | :--- |
-| **SavvyCAN-FD-C** | 1 × CAN/CAN FD | USB Type-A, 1 × CAN D-Sub 9-pin | Single CAN network monitoring, automotive diagnostics | [View Product](https://www.pibiger-tech.com/product/savvycan-fd-c/) |
-| **SavvyCAN-FD-X2** | 2 × CAN/CAN FD (independent) | USB Type-A, 2 × CAN D-Sub 9-pin | Multi-network monitoring, CAN gateway, network bridging | [View Product](https://www.pibiger-tech.com/product/savvycan-fd-x2/) |
+## Product Models
+
+| Model | Channels | Connector |
+| :--- | :--- | :--- |
+| **SavvyCAN-FD-C** | 1 × CAN/CAN FD | USB Type-A + 1 × D-Sub 9-pin |
+| **SavvyCAN-FD-X2** | 2 × CAN/CAN FD (independent) | USB Type-A + 2 × D-Sub 9-pin |
+
+---
+
+## Repository Structure
+
+| Directory / File | Description |
+| :--- | :--- |
+| [`1-Pibiger_SDK_WIN_Linux_Python_MacOS/`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/) | Pibiger SDK packages for Windows, Linux x64/ARM64, macOS, and Python |
+| [`1-Pibiger_SDK_WIN_Linux_Python_MacOS/DELIVERY_OVERVIEW.md`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/DELIVERY_OVERVIEW.md) | Full SDK documentation: installation, API reference, and code examples |
+| [`1-Pibiger_SDK_WIN_Linux_Python_MacOS/RELEASE_NOTES.md`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/RELEASE_NOTES.md) | SDK changelog and version history |
+| [`2-Driver/Win/`](./2-Driver/Win/) | Windows driver download link |
+| [`2-Driver/Mac/`](./2-Driver/Mac/) | macOS Python SDK package |
+| [`3_Linux_Soft_SocketCAN/`](./3_Linux_Soft_SocketCAN/) | Linux SocketCAN C and Python examples, can-utils |
+| [`4-WIN_Software/`](./4-WIN_Software/) | SavvyCAN-FD Windows GUI application |
+| [`5_ThirdParty_Soft/`](./5_ThirdParty_Soft/) | Third-party software download link (Busmaster, etc.) |
+| [`CE-FCC/`](./CE-FCC/) | CE and FCC certification documents |
+
+---
+
+## SDK Packages
+
+For full installation instructions, supported platforms, API reference, and code examples, see:
+
+> **[`1-Pibiger_SDK_WIN_Linux_Python_MacOS/DELIVERY_OVERVIEW.md`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/DELIVERY_OVERVIEW.md)**
+
+| Package | Platform |
+| :--- | :--- |
+| [`SAVVYCANFD-Windows-x64.zip`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/SAVVYCANFD-Windows-x64.zip) | Windows 10/11 x64 |
+| [`SAVVYCANFD-Linux-x64.tar.gz`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/SAVVYCANFD-Linux-x64.tar.gz) | Ubuntu 22.04+ x64 |
+| [`SAVVYCANFD-Linux-arm64.tar.gz`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/SAVVYCANFD-Linux-arm64.tar.gz) | Raspberry Pi 5 / Jetson Orin Nano (ARM64) |
+| [`SAVVYCANFD-macOS-arm64.tar.gz`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/SAVVYCANFD-macOS-arm64.tar.gz) | macOS — Apple Silicon (M1–M4) |
+| [`SAVVYCANFD-macOS-x64.tar.gz`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/SAVVYCANFD-macOS-x64.tar.gz) | macOS — Intel |
+| [`SAVVYCANFD-Python.zip`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/SAVVYCANFD-Python.zip) | Python 3.8+ — all platforms |
 
 ---
 
 ## Documentation
 
-- **[Hardware Manual](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd#id-2-hardware-manual)** — Detailed hardware specifications and pinouts
-- **[Quick Start Guide](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/quick-start-guide)** — Step-by-step instructions to get your device running
-- **[CAN FD Protocol](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/can-fd-protocal)** — Information on CAN FD standard and data rates
-
----
-
-## Repository Contents
-
-| Directory / File | Platform | Description |
-| :--- | :--- | :--- |
-| `0-Win_Driver/` | Windows | Windows driver download link |
-| `1-Pibiger_SDK_WIN_Linux_Python_MacOS/` | Windows / Linux / macOS / Python | Pibiger SDK packages (see below) |
-| `2-MacOS_SDK/` | macOS | macOS SDK package (legacy) |
-| `3_Linux_Soft_SocketCAN/` | Linux | SocketCAN C examples, can-utils, Python examples |
-| `4-WIN_Software/` | Windows | CANVIEWER GUI, CANVIEWER-SDK, SavvyCAN-FD |
-| `5_ThirdParty_Soft/` | — | Third-party software download link |
-| `CE-FCC/` | — | CE / FCC certification documents |
-
----
-
-## 1. Pibiger SDK
-
-The **Pibiger SDK** (version 5.0.0) is the recommended choice for developers who need direct, low-level camera access and maximum performance. It provides a lightweight, cross-platform C/C++ API and a Python binding, all built on the same underlying shared library.
-
-**SDK version**: 5.0.0 — **Last updated**: 2026-05-14
-
-For full delivery notes and package contents, see [`1-Pibiger_SDK_WIN_Linux_Python_MacOS/DELIVERY_OVERVIEW.md`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/DELIVERY_OVERVIEW.md).
-
-### Available Packages
-
-| Package | Platform | Size | Description |
-| :--- | :--- | :--- | :--- |
-| `V5-SDK-DLL-CUS.zip` | Windows x64 | 19 MB (zip) / 45 MB | C/C++ SDK with GUI viewer (SAVVYCANFD.exe), CLI demo, headers, and bundled runtime |
-| `V5-SDK-SO-CUS.tar.gz` | Linux x64 / ARM64 | 494 KB (tar.gz) / 1.3 MB | C/C++ SDK with GUI viewer, CLI demo, and headers |
-| `V5-SDK-PYTHON-CUS.zip` | Windows + Linux x64 / ARM64 | 153 KB (zip) / 390 KB | Python SDK — bundles native libraries for all platforms |
-
-All three packages share the same SDK source tree and the same underlying shared library. The Python package wraps the identical C library via ctypes — no separate codepath.
-
-### Supported Platforms
-
-| Platform | Architecture | Status |
-| :--- | :--- | :--- |
-| Windows 10 / 11 | x64 | ✅ Fully Supported |
-| Ubuntu 22.04+ / Debian 12+ | x64 | ✅ Fully Supported |
-| Raspberry Pi 5 (Bookworm) | ARM64 | ✅ Fully Supported |
-| NVIDIA Jetson Orin Nano (Ubuntu 22.04) | ARM64 | ✅ Fully Supported |
-
-### Supported Hardware Backends
-
-| Backend | Platform | Hardware |
-| :--- | :--- | :--- |
-| libusb + gs_usb protocol | Windows / Linux | candleLight-compatible USB-CAN adapters |
-| SocketCAN | Linux | Any kernel-supported CAN interface (`can0`, `vcan0`, etc.) |
-
-### Windows Quick Start (C/C++)
-
-```
-1. Extract V5-SDK-DLL-CUS.zip to any directory (e.g., D:\usbcan\)
-2. Plug in the USB-CAN adapter — Windows recognizes candleLight / gs_usb devices out-of-the-box, no driver install needed
-3. Double-click run_SAVVYCANFD.bat → GUI launches and your adapter appears in the device list
-```
-
-For Windows driver guidance, see: [Quick Start Guide](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/quick-start-guide)
-
-### Linux Quick Start (C/C++)
-
-```bash
-tar xzf V5-SDK-SO-CUS.tar.gz
-cd V5-SDK-SO-CUS
-
-# Install runtime dependencies (one-time)
-sudo apt update && sudo apt install -y libusb-1.0-0 libqt6widgets6
-
-# For candleLight / gs_usb USB adapters — non-root access via udev
-sudo tee /etc/udev/rules.d/90-usbcan.rules > /dev/null <<'EOF'
-SUBSYSTEM=="usb", ATTRS{idVendor}=="1d50", ATTRS{idProduct}=="606f", MODE="0666", GROUP="plugdev"
-EOF
-sudo udevadm control --reload-rules && sudo udevadm trigger
-sudo usermod -aG plugdev $USER
-# Log out and back in for the group change to take effect
-
-# Launch the GUI viewer
-case "$(uname -m)" in
-    x86_64)  cd ubuntu22.04-x64 ;;
-    aarch64) cd ubuntu22.04-arm64 ;;
-esac
-./run_SAVVYCANFD.sh
-```
-
-### Python SDK (V5-SDK-PYTHON-CUS)
-
-The Python package targets **Python 3.8–3.12** on Windows x64, Linux x64, and Linux ARM64. It is ideal for test automation, ECU diagnostics scripts, data-logging, and Jupyter notebooks.
-
-**Windows:**
-```bat
-:: 1. Extract V5-SDK-PYTHON-CUS.zip
-:: 2. Open a command prompt in V5-SDK-PYTHON-CUS\
-install_deps.bat        :: installs optional dependencies
-run_basic_capture.bat   :: smoke test
-run_recv_loop.bat       :: live receive loop
-```
-
-**Linux (Ubuntu 22.04, Debian 12+, Raspberry Pi OS Bookworm):**
-```bash
-# Same prerequisites as the C/C++ Linux package (libusb-1.0-0 + udev rule above)
-unzip V5-SDK-PYTHON-CUS.zip
-cd V5-SDK-PYTHON-CUS
-chmod +x *.sh
-./install_deps.sh
-./run_basic_capture.sh
-```
-
-**Python API example:**
-```python
-import usb_can
-
-# Discover adapters
-for d in usb_can.discover():
-    print(d.name, d.driver, d.serial)
-
-# Open, configure, send, receive
-with usb_can.Device(index=0) as dev:
-    dev.configure(bitrate=500_000)        # 500 kbps classic CAN
-    dev.start()
-    dev.send(can_id=0x123, data=b'\x11\x22\x33\x44')
-    for msg in dev.receive(timeout_ms=1000):
-        print(f"{msg.id:08X}  {msg.data.hex()}  ts={msg.timestamp_us}")
-```
-
-**Optional dependencies:**
-
-| Feature | Package | Install |
-| :--- | :--- | :--- |
-| Core (zero dependencies) | — | (nothing) |
-| Test runner | `pytest` | `pip install pytest` |
-| Notebook / plotting | `numpy`, `matplotlib` | `pip install numpy matplotlib` |
-
----
-
-## 2. macOS SDK
-
-Native macOS builds of the SavvyCAN-FD GUI are available in `1-Pibiger_SDK_WIN_Linux_Python_MacOS/`. Two separate packages are provided for Apple Silicon and Intel Macs.
-
-### Available Packages
-
-| Package | Architecture | Description |
-| :--- | :--- | :--- |
-| `SAVVYCANFD-macOS-AppleSilicon-arm64.zip` | Apple Silicon (M1 / M2 / M3 / M4) | Native arm64 build |
-| `SAVVYCANFD-macOS-Intel-x86_64.zip` | Intel x86_64 | Native x86_64 build |
-
-> **Note:** A legacy macOS SDK package is also available in `2-MacOS_SDK/V5-SDK-MACOS-CUS.zip` for reference.
-
-### Quick Start
-
-**Step 1: Identify your Mac architecture**
-
-```bash
-uname -m
-# arm64  → use SAVVYCANFD-macOS-AppleSilicon-arm64.zip
-# x86_64 → use SAVVYCANFD-macOS-Intel-x86_64.zip
-```
-
-**Step 2: Extract and launch**
-
-```bash
-# Apple Silicon example
-unzip SAVVYCANFD-macOS-AppleSilicon-arm64.zip
-cd SAVVYCANFD-macOS-AppleSilicon-arm64
-open SAVVYCANFD.app
-```
-
-**Step 3: Allow the app to run (first launch only)**
-
-macOS Gatekeeper may block unsigned apps on first launch. If you see a security warning:
-
-1. Open **System Settings → Privacy & Security**
-2. Scroll to the Security section and click **Open Anyway** next to the SAVVYCANFD entry
-3. Confirm by clicking **Open** in the dialog
-
-Alternatively, remove the quarantine attribute via Terminal:
-
-```bash
-xattr -dr com.apple.quarantine SAVVYCANFD.app
-```
-
-### Connecting the Device
-
-Plug in the USB-CAN adapter. macOS recognizes candleLight / gs_usb devices automatically — no additional driver installation is required. The adapter will appear in the device list when SAVVYCANFD launches.
-
-### Supported macOS Versions
-
-| Package | Minimum macOS | Notes |
-| :--- | :--- | :--- |
-| Apple Silicon (arm64) | macOS 12 Monterey | Runs natively on M-series chips |
-| Intel (x86_64) | macOS 11 Big Sur | Runs natively on Intel; also runs via Rosetta 2 on Apple Silicon |
-
----
-
-## 3. Linux SocketCAN
-
-For Linux users who prefer the native kernel SocketCAN interface, example code and can-utils are provided in `3_Linux_Soft_SocketCAN/`.
-
-### Setup
-
-```bash
-sudo apt update && sudo apt install -y can-utils
-
-# Bring up the CAN interface (replace can0 with your interface name)
-sudo ip link set can0 up type can bitrate 500000
-```
-
-### C Examples
-
-```bash
-# Receive CAN FD frames
-./3_Linux_Soft_SocketCAN/c/can0_receive_fd
-
-# Send CAN FD frames
-./3_Linux_Soft_SocketCAN/c/can1_send_fd
-```
-
-### Python Examples
-
-```bash
-# Receive
-python3 3_Linux_Soft_SocketCAN/python3/receive.py
-
-# Send
-python3 3_Linux_Soft_SocketCAN/python3/send.py
-```
-
-### Common SocketCAN Commands
-
-```bash
-# Monitor CAN traffic
-candump can0
-
-# Send a CAN FD frame
-cansend can0 123##0112233445566778899AABBCCDDEEFF
-
-# List available CAN interfaces
-ip link show type can
-```
-
----
-
-## 4. Windows Software
-
-The following Windows GUI applications are provided in `4-WIN_Software/`:
-
-| Application | Description |
-| :--- | :--- |
-| `SavvyCAN-FD.zip` | Advanced open-source CAN analysis tool with scripting support |
-
----
-
-## 5. Third-Party Software
-
-Additional third-party tools (Busmaster, etc.) are available for download:
-
-**Download**: [https://www.jianguoyun.com/p/DfuYpksQpdSrBxjO-p0GIAA](https://www.jianguoyun.com/p/DfuYpksQpdSrBxjO-p0GIAA)  
-**Password**: `hibqbp`
-
----
-
-## Troubleshooting
-
-**Windows — Device not detected**
-- Refer to the [Quick Start Guide](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/quick-start-guide) for driver installation instructions specific to your adapter type.
-
-**Linux — Permission denied accessing CAN interface**
-- Add your user to the `plugdev` group: `sudo usermod -aG plugdev $USER`, then log out and back in.
-
-**Linux — CAN interface not appearing**
-- Ensure the device is connected and the SocketCAN driver is loaded: `sudo modprobe can_dev`
+- **[Hardware Manual & Quick Start Guide](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd)** — Hardware specifications, pinouts, and step-by-step setup
+- **[CAN FD Protocol](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd/can-fd-protocal)** — CAN FD standard and data rate reference
 
 ---
 
@@ -339,7 +87,3 @@ Additional third-party tools (Busmaster, etc.) are available for download:
 - **Website**: [www.pibiger-tech.com](https://www.pibiger-tech.com)
 - **Documentation**: [docs.pibiger-tech.com](https://docs.pibiger-tech.com/home/usb-to-can-fd-series/savvycanfd)
 - **Email**: [support@pibiger-tech.com](mailto:support@pibiger-tech.com)
-
----
-
-**SDK Version**: 5.0.0 — **Last Updated**: 2026-05-14

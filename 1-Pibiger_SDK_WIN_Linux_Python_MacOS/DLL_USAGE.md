@@ -16,8 +16,8 @@ the Python interface, jump to [Section 5](#5-python-38).
 | `SAVVYCANFD-Windows-x64.zip`    | `bin/usb_can.dll` (+ `bin/libusb-1.0.dll`) | `lib/usb_can.lib`, `include/can/*.h` |
 | `SAVVYCANFD-Linux-x64.tar.gz`   | `lib/libusb_can.so.5.0.0` (+ SONAME symlinks) | `include/can/*.h` |
 | `SAVVYCANFD-Linux-arm64.tar.gz` | Same layout as x64 | Same |
-| `SAVVYCANFD-macOS-arm64.tar.gz` | `SAVVYCANFD.app/Contents/Frameworks/libusb_can.5.0.0.dylib` | `include/can/*.h` |
-| `SAVVYCANFD-macOS-x64.tar.gz`   | Same layout as arm64 | Same |
+| `SAVVYCANFD-macOS-arm64.zip` | `SAVVYCANFD.app/Contents/Frameworks/libusb_can.5.0.0.dylib` | `include/can/*.h` |
+| `SAVVYCANFD-macOS-x64.zip`   | Same layout as arm64 | Same |
 | `SAVVYCANFD-Python.zip`         | Native libraries for Windows x64 / Linux x64 / Linux ARM64 bundled inside | Not required — Python wraps them |
 
 The three source-integration packages (Windows / Linux) expose the same

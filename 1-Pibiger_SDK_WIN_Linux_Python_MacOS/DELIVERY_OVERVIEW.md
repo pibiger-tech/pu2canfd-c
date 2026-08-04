@@ -18,8 +18,8 @@ Linux, and macOS.
 | `SAVVYCANFD-Linux-x64.tar.gz`   | Linux x64                      | 253 KB | Linux C/C++ SDK, x64 build — see Section 4 |
 | `SAVVYCANFD-Linux-arm64.tar.gz` | Linux ARM64                    | 243 KB | Linux C/C++ SDK, ARM64 build — see Section 4 |
 | `SAVVYCANFD-Python.zip`         | Windows + Linux (x64 / ARM64)  | 153 KB | Python package — one archive covers all supported platforms — see Section 5 |
-| `SAVVYCANFD-macOS-arm64.tar.gz` | macOS Apple Silicon            | 22 MB  | macOS GUI app, M-series Mac — see Section 6 |
-| `SAVVYCANFD-macOS-x64.tar.gz`   | macOS Intel                    | 22 MB  | macOS GUI app, Intel Mac — see Section 6 |
+| `SAVVYCANFD-macOS-arm64.zip` | macOS Apple Silicon            | 22 MB  | macOS GUI app, M-series Mac — see Section 6 |
+| `SAVVYCANFD-macOS-x64.zip`   | macOS Intel                    | 22 MB  | macOS GUI app, Intel Mac — see Section 6 |
 
 The three SDK packages (Windows / Linux / Python) expose the **same
 public API**. Code written on one platform recompiles unchanged on
@@ -289,8 +289,8 @@ contact the SDK provider.
 
 | Archive                            | Mac hardware                             |
 |------------------------------------|------------------------------------------|
-| `SAVVYCANFD-macOS-arm64.tar.gz`    | Apple Silicon (M1 / M2 / M3 / M4)        |
-| `SAVVYCANFD-macOS-x64.tar.gz`      | Intel Mac                                |
+| `SAVVYCANFD-macOS-arm64.zip`    | Apple Silicon (M1 / M2 / M3 / M4)        |
+| `SAVVYCANFD-macOS-x64.zip`      | Intel Mac                                |
 
 Pick the archive that matches your Mac's chip (Apple menu → About This
 Mac → Chip). Apple Silicon Macs cannot run the Intel build, and vice
@@ -365,7 +365,7 @@ written for one recompiles unchanged on another.
      + `SAVVYCANFD-Linux-<arch>.tar.gz`
    - Test automation, data logging, scripting → `SAVVYCANFD-Python.zip`
      (single archive covers Windows + Linux, x64 + ARM64)
-   - macOS end users → `SAVVYCANFD-macOS-<arch>.tar.gz` (GUI only)
+   - macOS end users → `SAVVYCANFD-macOS-<arch>.zip` (GUI only)
    - The packages are **non-exclusive** — same behaviour, different
      interface. A customer can deploy any combination.
 

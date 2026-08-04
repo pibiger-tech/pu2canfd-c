@@ -15,8 +15,8 @@ public API behaves identically across Windows, Linux, and macOS.
 | `SAVVYCANFD-Linux-x64.tar.gz`      | Ubuntu 22.04+ / Debian 12+ (x64)  | Shared library, GUI, CLI example, headers                      |
 | `SAVVYCANFD-Linux-arm64.tar.gz`    | Ubuntu 22.04+ / Raspberry Pi OS   | Same as above, aarch64                                         |
 | `SAVVYCANFD-Python.zip`            | Windows + Linux (x64 + ARM64)     | Python package with bundled native libraries for all platforms |
-| `SAVVYCANFD-macOS-arm64.tar.gz`    | macOS 12+ Apple Silicon           | `SAVVYCANFD.app` + standalone `.dylib`, headers, CLI example   |
-| `SAVVYCANFD-macOS-x64.tar.gz`      | macOS 12+ Intel                   | `SAVVYCANFD.app` + standalone `.dylib`, headers, CLI example   |
+| `SAVVYCANFD-macOS-arm64.zip`    | macOS 12+ Apple Silicon           | `SAVVYCANFD.app` + standalone `.dylib`, headers, CLI example   |
+| `SAVVYCANFD-macOS-x64.zip`      | macOS 12+ Intel                   | `SAVVYCANFD.app` + standalone `.dylib`, headers, CLI example   |
 
 Every archive is self-contained: extract, follow the bundled README, run.
 No installer required.

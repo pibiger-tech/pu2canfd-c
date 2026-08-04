@@ -69,8 +69,8 @@ For full installation instructions, supported platforms, API reference, and code
 | [`SAVVYCANFD-Windows-x64.zip`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/SAVVYCANFD-Windows-x64.zip) | Windows 10/11 x64 |
 | [`SAVVYCANFD-Linux-x64.tar.gz`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/SAVVYCANFD-Linux-x64.tar.gz) | Ubuntu 22.04+ x64 |
 | [`SAVVYCANFD-Linux-arm64.tar.gz`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/SAVVYCANFD-Linux-arm64.tar.gz) | Raspberry Pi 5 / Jetson Orin Nano (ARM64) |
-| [`SAVVYCANFD-macOS-arm64.tar.gz`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/SAVVYCANFD-macOS-arm64.tar.gz) | macOS — Apple Silicon (M1–M4) |
-| [`SAVVYCANFD-macOS-x64.tar.gz`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/SAVVYCANFD-macOS-x64.tar.gz) | macOS — Intel |
+| [`SAVVYCANFD-macOS-arm64.zip`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/SAVVYCANFD-macOS-arm64.zip) | macOS — Apple Silicon (M1–M4) |
+| [`SAVVYCANFD-macOS-x64.zip`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/SAVVYCANFD-macOS-x64.zip) | macOS — Intel |
 | [`SAVVYCANFD-Python.zip`](./1-Pibiger_SDK_WIN_Linux_Python_MacOS/SAVVYCANFD-Python.zip) | Python 3.8+ — all platforms |
 
 ---

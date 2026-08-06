@@ -13,15 +13,20 @@ the Python interface, jump to [Section 5](#5-python-38).
 
 | Package | Library file | Import library / header |
 |---|---|---|
-| `SAVVYCANFD-Windows-x64.zip`    | `bin/usb_can.dll` (+ `bin/libusb-1.0.dll`) | `lib/usb_can.lib`, `include/can/*.h` |
-| `SAVVYCANFD-Linux-x64.tar.gz`   | `lib/libusb_can.so.5.0.0` (+ SONAME symlinks) | `include/can/*.h` |
-| `SAVVYCANFD-Linux-arm64.tar.gz` | Same layout as x64 | Same |
-| `SAVVYCANFD-macOS-arm64.zip` | `SAVVYCANFD.app/Contents/Frameworks/libusb_can.5.0.0.dylib` | `include/can/*.h` |
-| `SAVVYCANFD-macOS-x64.zip`   | Same layout as arm64 | Same |
-| `SAVVYCANFD-Python.zip`         | Native libraries for Windows x64 / Linux x64 / Linux ARM64 bundled inside | Not required — Python wraps them |
+| `SAVVYCANFD-Windows-x64.zip`  | `bin/usb_can.dll` (+ `bin/libusb-1.0.dll`) | `lib/usb_can.lib`, `include/can/*.h` |
+| `SAVVYCANFD-Linux-x64.tar.gz` | `lib/libusb_can.so.5.0.0` (+ SONAME symlinks) | `include/can/*.h` |
+| `SAVVYCANFD-Linux-arm64.zip`  | Same layout as x64 | Same |
+| `SAVVYCANFD-macOS-arm64.zip`  | `lib/libusb_can.5.0.0.dylib` (+ version symlinks) | `include/can/*.h` |
+| `SAVVYCANFD-macOS-x64.zip`    | Same layout as arm64 | Same |
+| `SAVVYCANFD-Python.zip`       | Native libraries for all five platforms bundled inside | Not required — Python wraps them |
 
-The three source-integration packages (Windows / Linux) expose the same
-public C API through the same three headers under `include/can/`.
+The four source-integration packages (Windows / Linux / macOS) expose the
+same public C API through the same three headers under `include/can/`.
+
+The macOS packages also carry a copy of the library inside
+`SAVVYCANFD.app/Contents/Frameworks/`. That copy belongs to the bundled
+GUI and has bundle-relative load paths; link your own code against
+`lib/libusb_can.5.0.0.dylib` instead.
 
 ---
 
@@ -143,23 +148,28 @@ itself without polluting `/usr/lib`.
 
 ### macOS
 
-The SDK dylib lives inside the app bundle at
-`SAVVYCANFD.app/Contents/Frameworks/libusb_can.5.0.0.dylib`. To link
-your own binary against it:
+Ship the dylib next to your binary, the same pattern as Linux:
+
+```
+libusb_can.5.0.0.dylib
+libusb_can.5.dylib      (symlink to libusb_can.5.0.0.dylib)
+libusb_can.dylib        (symlink)
+```
 
 ```bash
-APP=SAVVYCANFD.app
-FRAMEWORKS=$APP/Contents/Frameworks
-
+# From inside the extracted SAVVYCANFD-macOS-<arch>/ directory:
 clang my_app.c \
-    -I SAVVYCANFD-macOS-arm64/include \
-    -L $FRAMEWORKS -lusb_can \
-    -Wl,-rpath,@executable_path/$FRAMEWORKS \
+    -Iinclude \
+    -Llib -lusb_can \
+    -Wl,-rpath,@executable_path/lib \
     -o my_app
 ```
 
-Ship `my_app` together with the `SAVVYCANFD.app` bundle so the rpath
-resolves at runtime.
+`@executable_path/lib` lets the binary find the dylib in a sibling
+`lib/` folder, so you can ship `my_app` and `lib/` together.
+
+`libusb-1.0` must be present on the target machine
+(`brew install libusb`), or bundled inside your own `.app`.
 
 ---
 
@@ -190,8 +200,13 @@ rpath on macOS).
 
 ## 5. Python (3.8+)
 
-The Python package bundles the native library for Windows x64, Linux
-x64, and Linux ARM64. No separate C library install is required.
+The Python package bundles the native library for all five supported
+platforms — Windows x64, Linux x64, Linux ARM64, macOS Apple Silicon and
+macOS Intel. The right one is selected at import time. No separate C
+library install is required.
+
+On Linux and macOS the system `libusb-1.0` is still needed
+(`sudo apt install -y libusb-1.0-0`, or `brew install libusb`).
 
 ```bash
 unzip SAVVYCANFD-Python.zip

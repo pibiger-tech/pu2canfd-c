@@ -6,7 +6,7 @@ and a Python wrapper — the same behaviour and same public API on Windows,
 Linux, and macOS.
 
 - **SDK version:** 5.0.0
-- **Last updated:** 2026-07-03
+- **Last updated:** 2026-08-06
 
 ---
 
@@ -14,18 +14,34 @@ Linux, and macOS.
 
 | File | Platform | Size | Purpose |
 |---|---|---|---|
-| `SAVVYCANFD-Windows-x64.zip`    | Windows x64                    | 19 MB  | Windows C/C++ SDK — see Section 3 |
-| `SAVVYCANFD-Linux-x64.tar.gz`   | Linux x64                      | 253 KB | Linux C/C++ SDK, x64 build — see Section 4 |
-| `SAVVYCANFD-Linux-arm64.tar.gz` | Linux ARM64                    | 243 KB | Linux C/C++ SDK, ARM64 build — see Section 4 |
-| `SAVVYCANFD-Python.zip`         | Windows + Linux (x64 / ARM64)  | 153 KB | Python package — one archive covers all supported platforms — see Section 5 |
-| `SAVVYCANFD-macOS-arm64.zip` | macOS Apple Silicon            | 22 MB  | macOS GUI app, M-series Mac — see Section 6 |
-| `SAVVYCANFD-macOS-x64.zip`   | macOS Intel                    | 22 MB  | macOS GUI app, Intel Mac — see Section 6 |
+| `SAVVYCANFD-Windows-x64.zip`  | Windows x64           | 9.4 MB  | Windows C/C++ SDK — see Section 3 |
+| `SAVVYCANFD-Linux-x64.tar.gz` | Linux x64             | 255 KB  | Linux C/C++ SDK, x64 build — see Section 4 |
+| `SAVVYCANFD-Linux-arm64.zip`  | Linux ARM64           | 245 KB  | Linux C/C++ SDK, ARM64 build — see Section 4 |
+| `SAVVYCANFD-Python.zip`       | Windows, Linux, macOS | 207 KB  | Python package — one archive covers all supported platforms — see Section 5 |
+| `SAVVYCANFD-macOS-arm64.zip`  | macOS Apple Silicon   | 19.5 MB | macOS GUI app + C/C++ SDK, M-series Mac — see Section 6 |
+| `SAVVYCANFD-macOS-x64.zip`    | macOS Intel           | 19.6 MB | macOS GUI app + C/C++ SDK, Intel Mac — see Section 6 |
 
-The three SDK packages (Windows / Linux / Python) expose the **same
-public API**. Code written on one platform recompiles unchanged on
+All five SDK packages (Windows / Linux / macOS / Python) expose the
+**same public API**. Code written on one platform recompiles unchanged on
 another; Python code written with `usb_can` runs unchanged on every
-supported platform. The macOS package is a standalone GUI app — no
-library bindings, see Section 6.
+supported platform.
+
+### Extracting the archives
+
+Three archives hold a single inner archive and need a second step:
+
+```bash
+unzip SAVVYCANFD-Linux-arm64.zip          # yields SAVVYCANFD-Linux-arm64.tar.gz
+tar xzf SAVVYCANFD-Linux-arm64.tar.gz
+
+# The macOS inner archive carries the same name as the outer one,
+# so unpack the first step into its own directory.
+unzip SAVVYCANFD-macOS-arm64.zip -d inner
+unzip inner/SAVVYCANFD-macOS-arm64.zip
+```
+
+`SAVVYCANFD-Windows-x64.zip`, `SAVVYCANFD-Linux-x64.tar.gz` and
+`SAVVYCANFD-Python.zip` extract directly.
 
 ---
 
@@ -82,7 +98,7 @@ does not change with the adapter.
 SAVVYCANFD-Windows-x64/
 ├── README.md                       Getting-started guide
 ├── run_SAVVYCANFD.bat              Launch the GUI (double-click)
-├── bin/                            Self-contained runtime (~45 MB)
+├── bin/                            Self-contained runtime (~21 MB)
 │   ├── SAVVYCANFD.exe              GUI trace viewer
 │   ├── can_example.exe             CLI sample
 │   ├── usb_can.dll                 SDK library
@@ -146,9 +162,14 @@ SAVVYCANFD-Linux-<arch>/
 ### 4.3 Quick Start
 
 ```bash
-# Pick the tarball matching your CPU:
-tar xzf SAVVYCANFD-Linux-x64.tar.gz            # or -arm64.tar.gz
+# x64 — extracts directly:
+tar xzf SAVVYCANFD-Linux-x64.tar.gz
 cd SAVVYCANFD-Linux-x64
+
+# ARM64 — unzip first, then extract the tarball inside:
+#   unzip SAVVYCANFD-Linux-arm64.zip
+#   tar xzf SAVVYCANFD-Linux-arm64.tar.gz
+#   cd SAVVYCANFD-Linux-arm64
 
 # Install runtime dependencies (one-time)
 sudo apt update
@@ -180,13 +201,15 @@ itself, so you can ship `my_app` together with the `lib/` folder.
 
 ### 5.1 Audience & requirements
 
-- **Python 3.8 – 3.12** (CPython) on Windows x64, Linux x64, or Linux ARM64
+- **Python 3.8 – 3.12** (CPython) on Windows x64, Linux x64, Linux ARM64,
+  macOS Apple Silicon, or macOS Intel
 - Test automation, ECU diagnostics scripting, data logging, Jupyter notebooks
 - Rapid prototyping with the same behaviour as the C/C++ packages
 - Zero required Python dependencies
 
-A single archive covers Windows and Linux (x64 + ARM64) — no per-platform
-install variants.
+A single archive covers all five platforms — no per-platform install
+variants. On Linux and macOS the system `libusb-1.0` is still required
+(`sudo apt install -y libusb-1.0-0`, or `brew install libusb`).
 
 ### 5.2 Folder layout
 
@@ -276,29 +299,55 @@ Or run `install_deps.bat` / `install_deps.sh` for an interactive prompt.
 
 ---
 
-## 6. macOS GUI App
+## 6. macOS Package
 
 ### 6.1 Audience
 
 End users on macOS who want SAVVYCANFD as a desktop GUI for CAN / CAN FD
-trace, transmit, and DBC decoding. **GUI-only** — no library or language
-bindings ship in this package. For SDK-style integration on macOS,
-contact the SDK provider.
+trace, transmit, and DBC decoding — and developers integrating the SDK
+into their own macOS application. The package covers both: the GUI app
+plus a standalone dylib, the public headers, and the CLI sample, in the
+same layout as the Linux packages.
 
 ### 6.2 What's in the archive
 
-| Archive                            | Mac hardware                             |
-|------------------------------------|------------------------------------------|
-| `SAVVYCANFD-macOS-arm64.zip`    | Apple Silicon (M1 / M2 / M3 / M4)        |
-| `SAVVYCANFD-macOS-x64.zip`      | Intel Mac                                |
+| Archive                       | Mac hardware                      |
+|-------------------------------|-----------------------------------|
+| `SAVVYCANFD-macOS-arm64.zip`  | Apple Silicon (M1 / M2 / M3 / M4) |
+| `SAVVYCANFD-macOS-x64.zip`    | Intel Mac                         |
 
 Pick the archive that matches your Mac's chip (Apple menu → About This
 Mac → Chip). Apple Silicon Macs cannot run the Intel build, and vice
 versa.
 
-Extract, then drag `SAVVYCANFD.app` to `/Applications/`.
+```
+SAVVYCANFD-macOS-<arch>/
+├── SAVVYCANFD.app                  GUI trace viewer
+├── lib/libusb_can.5.0.0.dylib      SDK library (with version symlinks)
+├── bin/can_example                 CLI sample
+├── include/can/*.h                 Public API headers (same as Windows / Linux)
+├── examples/basic_can.c            Sample source
+└── run_SAVVYCANFD.sh               Launch script
+```
 
-### 6.3 First launch (Gatekeeper)
+Extract (two steps — see Section 1), then drag `SAVVYCANFD.app` to
+`/Applications/`.
+
+### 6.3 Application development
+
+```bash
+# From inside the extracted SAVVYCANFD-macOS-<arch>/ directory:
+clang my_app.c \
+    -Iinclude \
+    -Llib -lusb_can \
+    -Wl,-rpath,@executable_path/lib \
+    -o my_app
+```
+
+`libusb-1.0` must be present on the target machine
+(`brew install libusb`). See `DLL_USAGE.md` for deployment details.
+
+### 6.4 First launch (Gatekeeper)
 
 The app is unsigned. macOS will refuse the first launch with an
 "unable to verify" or "damaged" prompt. Run this once in Terminal, then
@@ -311,7 +360,7 @@ sudo xattr -dr com.apple.quarantine /Applications/SAVVYCANFD.app
 macOS 14 (Sonoma) and earlier also support the Finder → right-click →
 **Open** dialog. macOS 15 (Sequoia) requires the `xattr` command above.
 
-### 6.4 Hardware
+### 6.5 Hardware
 
 Plug in a supported USB-CAN adapter and launch the app. No driver
 install is required.
@@ -320,19 +369,19 @@ install is required.
 
 ## 7. Cross-Platform Quick Reference
 
-| Aspect                | Windows C/C++                        | Linux C/C++                              | Python                                     |
-|-----------------------|--------------------------------------|------------------------------------------|--------------------------------------------|
-| Package               | `SAVVYCANFD-Windows-x64.zip`         | `SAVVYCANFD-Linux-<arch>.tar.gz`         | `SAVVYCANFD-Python.zip`                    |
-| GUI viewer            | `bin\SAVVYCANFD.exe`                 | `bin/SAVVYCANFD`                         | (C/C++ GUI — Python package is headless)   |
-| CLI sample            | `bin\can_example.exe`                | `bin/can_example`                        | `examples\basic_capture.py`                |
-| Public API            | Same headers `include/can/*.h`       | Same headers `include/can/*.h`           | `import usb_can`                           |
-| Launch script         | `run_SAVVYCANFD.bat`                 | `run_SAVVYCANFD.sh`                      | `run_basic_capture.bat / .sh`              |
-| Qt6 runtime           | Bundled                              | System `libqt6widgets6`                  | Not used                                   |
-| Architectures         | x64                                  | x64 + ARM64                              | x64 + ARM64 (single package)               |
-| Package size          | 45 MB (zip 19 MB)                    | ~660 KB per arch (tar.gz ~250 KB)        | 390 KB (zip 153 KB)                        |
-| Supported OS          | Windows 10 / 11 x64                  | Ubuntu 22.04+ / Debian 12+ / Pi OS Bookworm | All of the above + Python 3.8 – 3.12    |
+| Aspect          | Windows C/C++                  | Linux C/C++                     | macOS C/C++                     | Python                                   |
+|-----------------|--------------------------------|---------------------------------|---------------------------------|------------------------------------------|
+| Package         | `SAVVYCANFD-Windows-x64.zip`   | `SAVVYCANFD-Linux-x64.tar.gz` / `-arm64.zip` | `SAVVYCANFD-macOS-<arch>.zip`  | `SAVVYCANFD-Python.zip`                  |
+| GUI viewer      | `bin\SAVVYCANFD.exe`           | `bin/SAVVYCANFD`                | `SAVVYCANFD.app`                | (C/C++ GUI — Python package is headless) |
+| CLI sample      | `bin\can_example.exe`          | `bin/can_example`               | `bin/can_example`               | `examples\basic_capture.py`              |
+| Public API      | Same headers `include/can/*.h` | Same headers `include/can/*.h`  | Same headers `include/can/*.h`  | `import usb_can`                         |
+| Launch script   | `run_SAVVYCANFD.bat`           | `run_SAVVYCANFD.sh`             | `run_SAVVYCANFD.sh`             | `run_basic_capture.bat / .sh`            |
+| Qt6 runtime     | Bundled                        | System `libqt6widgets6`         | Bundled in the `.app`           | Not used                                 |
+| Architectures   | x64                            | x64 + ARM64                     | Apple Silicon + Intel           | all five (single package)                |
+| Package size    | 21 MB (zip 9.4 MB)             | ~660 KB per arch (~250 KB packed) | ~20 MB per arch               | 524 KB (zip 207 KB)                      |
+| Supported OS    | Windows 10 / 11 x64            | Ubuntu 22.04+ / Debian 12+ / Pi OS Bookworm | macOS 12+           | All of the above + Python 3.8 – 3.12     |
 
-The public API is identical across the three SDK packages — source code
+The public API is identical across all SDK packages — source code
 written for one recompiles unchanged on another.
 
 ---
@@ -361,11 +410,12 @@ written for one recompiles unchanged on another.
 3. **Custom enterprise deployment** — the package layout is suitable as a
    base for re-branding (logo, signing, license-key gating).
 4. **Choosing a package**
-   - System integrators / desktop apps → `SAVVYCANFD-Windows-x64.zip`
-     + `SAVVYCANFD-Linux-<arch>.tar.gz`
+   - System integrators / desktop apps → `SAVVYCANFD-Windows-x64.zip`,
+     `SAVVYCANFD-Linux-x64.tar.gz` / `SAVVYCANFD-Linux-arm64.zip`,
+     `SAVVYCANFD-macOS-<arch>.zip`
    - Test automation, data logging, scripting → `SAVVYCANFD-Python.zip`
-     (single archive covers Windows + Linux, x64 + ARM64)
-   - macOS end users → `SAVVYCANFD-macOS-<arch>.zip` (GUI only)
+     (single archive covers all five platforms)
+   - macOS end users → `SAVVYCANFD-macOS-<arch>.zip`
    - The packages are **non-exclusive** — same behaviour, different
      interface. A customer can deploy any combination.
 

@@ -1,6 +1,6 @@
 # SAVVYCANFD SDK — Release Notes
 
-**Version 5.0.0 · 2026-07-03**
+**Version 5.0.0 · 2026-08-06**
 
 SAVVYCANFD is a cross-platform USB-CAN / CAN FD SDK. This release ships
 a native C library, a Qt6 desktop GUI, and a Python wrapper — built from
@@ -9,17 +9,33 @@ public API behaves identically across Windows, Linux, and macOS.
 
 ## Packages in this release
 
-| Archive                            | Platform                          | Content                                                        |
-|------------------------------------|-----------------------------------|----------------------------------------------------------------|
-| `SAVVYCANFD-Windows-x64.zip`       | Windows 10 / 11 (x64)             | `usb_can.dll`, GUI, CLI example, headers                       |
-| `SAVVYCANFD-Linux-x64.tar.gz`      | Ubuntu 22.04+ / Debian 12+ (x64)  | Shared library, GUI, CLI example, headers                      |
-| `SAVVYCANFD-Linux-arm64.tar.gz`    | Ubuntu 22.04+ / Raspberry Pi OS   | Same as above, aarch64                                         |
-| `SAVVYCANFD-Python.zip`            | Windows + Linux (x64 + ARM64)     | Python package with bundled native libraries for all platforms |
-| `SAVVYCANFD-macOS-arm64.zip`    | macOS 12+ Apple Silicon           | `SAVVYCANFD.app` + standalone `.dylib`, headers, CLI example   |
-| `SAVVYCANFD-macOS-x64.zip`      | macOS 12+ Intel                   | `SAVVYCANFD.app` + standalone `.dylib`, headers, CLI example   |
+| Archive                          | Platform                          | Content                                                        |
+|----------------------------------|-----------------------------------|----------------------------------------------------------------|
+| `SAVVYCANFD-Windows-x64.zip`     | Windows 10 / 11 (x64)             | `usb_can.dll`, GUI, CLI example, headers                       |
+| `SAVVYCANFD-Linux-x64.tar.gz`    | Ubuntu 22.04+ / Debian 12+ (x64)  | Shared library, GUI, CLI example, headers                      |
+| `SAVVYCANFD-Linux-arm64.zip`     | Ubuntu 22.04+ / Raspberry Pi OS   | Same as above, aarch64                                         |
+| `SAVVYCANFD-Python.zip`          | Windows, Linux, macOS             | Python package with bundled native libraries for all platforms |
+| `SAVVYCANFD-macOS-arm64.zip`     | macOS 12+ Apple Silicon           | `SAVVYCANFD.app` + standalone `.dylib`, headers, CLI example   |
+| `SAVVYCANFD-macOS-x64.zip`       | macOS 12+ Intel                   | `SAVVYCANFD.app` + standalone `.dylib`, headers, CLI example   |
 
 Every archive is self-contained: extract, follow the bundled README, run.
 No installer required.
+
+**Two-step extraction for three archives.** `SAVVYCANFD-Linux-arm64.zip`,
+`SAVVYCANFD-macOS-arm64.zip` and `SAVVYCANFD-macOS-x64.zip` each hold a
+single inner archive. Unzip once, then extract what comes out:
+
+```bash
+unzip SAVVYCANFD-Linux-arm64.zip          # yields SAVVYCANFD-Linux-arm64.tar.gz
+tar xzf SAVVYCANFD-Linux-arm64.tar.gz
+
+# The macOS inner archive carries the same name as the outer one,
+# so unpack the first step into its own directory.
+unzip SAVVYCANFD-macOS-arm64.zip -d inner
+unzip inner/SAVVYCANFD-macOS-arm64.zip
+```
+
+The other three archives extract directly.
 
 ## Highlights
 
@@ -40,10 +56,12 @@ No installer required.
 - **First-class Linux ARM64.** Verified on Raspberry Pi 5 and NVIDIA
   Jetson Orin Nano. Same source, same behaviour as x64.
 - **Single Python archive covers every supported platform.** `usb_can`
-  bundles native libraries for Windows x64, Linux x64, and Linux ARM64 —
-  the same archive works on all three. Zero required Python dependencies.
-- **macOS desktop app.** Dedicated `SAVVYCANFD.app` builds for both Apple
-  Silicon and Intel Macs.
+  bundles native libraries for Windows x64, Linux x64, Linux ARM64, and
+  macOS on both Apple Silicon and Intel — the same archive works on all
+  five. Zero required Python dependencies.
+- **macOS desktop app and SDK.** Dedicated `SAVVYCANFD.app` builds for
+  both Apple Silicon and Intel Macs, each shipping alongside a standalone
+  `.dylib`, the public headers, and the CLI sample.
 
 ## Compatibility
 

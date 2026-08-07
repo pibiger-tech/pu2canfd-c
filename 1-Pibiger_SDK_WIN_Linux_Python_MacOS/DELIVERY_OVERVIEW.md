@@ -105,9 +105,7 @@ SAVVYCANFD-Windows-x64/
 │   └── (Qt6 + support runtimes)
 ├── lib/usb_can.lib                 Import library
 ├── include/can/                    Public API headers
-├── examples/basic_can.c            Sample source
-├── CMakeLists.txt                  Minimal CMake project for the sample
-└── third_party_license/            Bundled license notices
+└── examples/basic_can.c            Sample source
 ```
 
 ### 3.3 Quick Start
@@ -149,7 +147,7 @@ See `include/can/*.h` for the public API.
 
 ```
 SAVVYCANFD-Linux-<arch>/
-├── README_LINUX.md                 Getting-started + permission setup
+├── README.md                       Getting-started + permission setup
 ├── lib/libusb_can.so*              SDK library (with SONAME chain)
 ├── bin/
 │   ├── SAVVYCANFD                  GUI trace viewer

@@ -95,9 +95,8 @@ int main(void) {
 ```
 
 The full working sample is `examples/basic_can.c` inside each SDK
-package, and each Windows / Linux package ships a minimal
-`CMakeLists.txt` at the top level that builds it against the bundled
-headers and library.
+package. Build it against the package's own `include/` and `lib/`
+directories — see Section 1 for the exact paths on each platform.
 
 ### Public API headers
 
